@@ -1,9 +1,1 @@
-SWIFT_OPTIMIZATION_LEVEL = -O
-
-ONLY_ACTIVE_ARCH = NO
-
-CODE_SIGN_STYLE = Automatic
-
-DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
-
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited)
+#include? "../Pods/Target Support Files/Pods-Example.release.xcconfig"
