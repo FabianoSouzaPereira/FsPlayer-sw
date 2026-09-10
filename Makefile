@@ -1,64 +1,89 @@
 name: FsPlayerExample
 
 options:
+
   createIntermediateGroups: false
+
   groupSortPosition: top
 
-  postGenCommand: | 
-    echo "Podfile.lock ... REMOVED"
-    rm -f Podfile.lock
-    echo Pods ... REMOVED
-    rm -rf Pods
-    echo "Installing pods..."
-    pod install --verbose
-
   bundleIdPrefix: com.fabianospdev
+
   deploymentTarget:
     iOS: 16.2
 
-settings:
-  base:
-    ALWAYS_SEARCH_USER_PATHS: YES
-    BUILD_LIBRARY_FOR_DISTRIBUTION: YES
-    SWIFT_VERSION: 5.7
+  postGenCommand: |
+    echo "Installing CocoaPods dependencies..."
+    pod install
 
-  DEBUG:
-    ENABLE_TESTABILITY: YES
-    ONLY_ACTIVE_ARCH: YES
-    SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+settings:
+
+  base:
+    SWIFT_VERSION: 5.10
+
+  configs:
+
+    Debug:
+      ENABLE_TESTABILITY: YES
+      ONLY_ACTIVE_ARCH: YES
+      SWIFT_OPTIMIZATION_LEVEL: "-Onone"
 
 targets:
+
   FsPlayerExample:
+
     type: application
+
     platform: iOS
+
     sources:
-      -  path: ./FsPlayerExample
+      - path: FsPlayerExample
+
     info:
-      path: ./FsPlayerExample/Info.plist
+      path: FsPlayerExample/Info.plist
+
     settings:
+
       base:
+
         PRODUCT_BUNDLE_IDENTIFIER: com.fabianospdev.fsplayerexample
+
         PRODUCT_NAME: $(TARGET_NAME)
+
         DEVELOPMENT_TEAM: 9Z2K5Z7V3C
+
         INFOPLIST_FILE: FsPlayerExample/Info.plist
+
         TARGETED_DEVICE_FAMILY: 1
 
+
   FsPlayerTests:
+
     type: bundle.unit-test
+
     platform: iOS
+
     dependencies:
       - target: FsPlayerExample
+
     sources:
-      - ../Tests/FsPlayerTests
+      - path: ../Tests/FsPlayerTests
+
     info:
       path: ../Tests/FsPlayerTests/Info.plist
       group: Tests
 
+
   FsPlayerUITests:
+
     type: bundle.ui-testing
+
     platform: iOS
+
+    dependencies:
+      - target: FsPlayerExample
+
     sources:
-      - ../Tests/FsPlayerUITests
+      - path: ../Tests/FsPlayerUITests
 
     info:
       path: ../Tests/FsPlayerUITests/Info.plist
@@ -67,17 +92,27 @@ targets:
     dependencies:
       - target: FsPlayerExample
 
+
 schemes:
+
   FsPlayerExample:
+
     build:
+
       targets:
         FsPlayerExample: all
+
     buildImplicitDependencies: true
+
     test:
+
       gatherCoverageData: true
+
       coverageTargets:
         - FsPlayerExample
+
       targets:
         - name: FsPlayerTests
-        - name: FsPlayerUITests 
-          parallelizable: true 
+
+        - name: FsPlayerUITests
+          parallelizable: true
