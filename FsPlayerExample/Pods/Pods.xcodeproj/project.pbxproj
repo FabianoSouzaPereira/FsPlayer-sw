@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F585B5C8901DF006B43618C0D9CAEBB3 /* PBXContainerItemProxy */ = {
+		0C1E4ABAC1A774946032474FE3951489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -43,9 +43,12 @@
 /* Begin PBXFileReference section */
 		090293FA04DA59D488DF8351790C51CF /* Pods-FsPlayerExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FsPlayerExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0C0506D851FEEBDDDE3A8939C9D8DA70 /* Pods-FsPlayerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FsPlayerExample.release.xcconfig"; sourceTree = "<group>"; };
+		1771D5F8987E1798A6A366EA7982095E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1C88F9C166AB6B5C792EBBA1475E264F /* Pods-FsPlayerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FsPlayerUITests.modulemap"; sourceTree = "<group>"; };
-		22FC589F7547490E1C2DB146DF8A2DE3 /* FsPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FsPlayer.debug.xcconfig; sourceTree = "<group>"; };
 		2320C504AAC944909C901946F110155E /* Pods-FsPlayerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FsPlayerUITests-Info.plist"; sourceTree = "<group>"; };
+		2CAE6E2794799D10CF992CE7CB206A34 /* FsPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FsPlayer.release.xcconfig; sourceTree = "<group>"; };
+		30F43C83557CDF321135E72B9C0FC73B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		34B95B4EC88C1A4926B7A9D5219D6DC9 /* FsPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FsPlayer.debug.xcconfig; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3B4855FB88774DA264CB7D61AFA4C3AB /* Pods-FsPlayerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FsPlayerTests-umbrella.h"; sourceTree = "<group>"; };
 		40CD0B0679A54AEB732B68DA69F5ADA6 /* Pods-FsPlayerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FsPlayerUITests-dummy.m"; sourceTree = "<group>"; };
@@ -57,23 +60,21 @@
 		6BD92DD0DAE8C5AACCCBB5197A652805 /* Pods-FsPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FsPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C112A030F8C7775BCB02C2E91BB0E0C /* Pods-FsPlayerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FsPlayerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		712F133007B5E9929ED533B095F00ABE /* Pods-FsPlayerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FsPlayerTests-dummy.m"; sourceTree = "<group>"; };
-		762E2C2E74F57DFCD31C959D33B53CC3 /* FsPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FsPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8F6AE67A8C1490A0C83FAB0BC7466BBB /* Pods-FsPlayerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FsPlayerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A40CFE34CD133D01E58F3A5C957CE56A /* Pods-FsPlayerExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FsPlayerExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		A7AC4AD08429F602946BA4D5990DDBD8 /* Pods-FsPlayerExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FsPlayerExample-umbrella.h"; sourceTree = "<group>"; };
 		A9D94BD9C3544A76AED2D4A1B4FCEE73 /* Pods-FsPlayerExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FsPlayerExample-Info.plist"; sourceTree = "<group>"; };
 		AD769A9F566879D61394613BCDE1BFC7 /* Pods-FsPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FsPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADB0C91DA7DB6741A7C2ECFCD488455B /* FsPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FsPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B084C6A3DC0D1A1FEA7D621FCED3BA4C /* Pods-FsPlayerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FsPlayerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C9E018F37DE9948D9CB62A08BD7D0579 /* Pods-FsPlayerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FsPlayerTests.modulemap"; sourceTree = "<group>"; };
 		D441059AE54DF0BE2DEE266E0101A54A /* Pods-FsPlayerUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FsPlayerUITests"; path = Pods_FsPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2AE735196CA0CA9DF8D81A284AD901 /* Pods-FsPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FsPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC2E2AB043BF9A3EC829F83DD9292F92 /* Pods-FsPlayerTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FsPlayerTests"; path = Pods_FsPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDB1392A01A4DB1918AB7645101E9CAB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E3B323A08F797BDF9F6AC92E57B92FAA /* Pods-FsPlayerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FsPlayerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EB19F39C5EE33153B6558511EBB218B9 /* Pods-FsPlayerExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FsPlayerExample"; path = Pods_FsPlayerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AC8AB297A581AB9A1EE2047F3A7457 /* Pods-FsPlayerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FsPlayerTests-Info.plist"; sourceTree = "<group>"; };
-		FDD2A55193F701E5D1728067E5B90EBC /* FsPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FsPlayer.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +118,7 @@
 		4A59FF2EB5B9F4060E6F692925C5BC84 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				63BF46F456D84FA4900F091C90BF2BF5 /* FsPlayer */,
+				A91893393A9B58B503E816D19447E6DB /* FsPlayer */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -164,14 +165,14 @@
 			path = "Target Support Files/Pods-FsPlayerExample";
 			sourceTree = "<group>";
 		};
-		63BF46F456D84FA4900F091C90BF2BF5 /* FsPlayer */ = {
+		68B8FC70A93782629CA16E1B79BFDFBF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DCA0EA050ADCC42E77F2767626D08423 /* Pod */,
-				ADA9E7DEEF7DEDEB776EDF4086CF0599 /* Support Files */,
+				34B95B4EC88C1A4926B7A9D5219D6DC9 /* FsPlayer.debug.xcconfig */,
+				2CAE6E2794799D10CF992CE7CB206A34 /* FsPlayer.release.xcconfig */,
 			);
-			name = FsPlayer;
-			path = ../..;
+			name = "Support Files";
+			path = "FsPlayerExample/Pods/Target Support Files/FsPlayer";
 			sourceTree = "<group>";
 		};
 		79DC10EAEFF46A42FF5AFA63AB3650D1 /* Pods-FsPlayerTests */ = {
@@ -190,14 +191,24 @@
 			path = "Target Support Files/Pods-FsPlayerTests";
 			sourceTree = "<group>";
 		};
-		ADA9E7DEEF7DEDEB776EDF4086CF0599 /* Support Files */ = {
+		A91893393A9B58B503E816D19447E6DB /* FsPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				22FC589F7547490E1C2DB146DF8A2DE3 /* FsPlayer.debug.xcconfig */,
-				FDD2A55193F701E5D1728067E5B90EBC /* FsPlayer.release.xcconfig */,
+				C42A5DA9A4EF0B771E32BB7C372B31FD /* Pod */,
+				68B8FC70A93782629CA16E1B79BFDFBF /* Support Files */,
 			);
-			name = "Support Files";
-			path = "FsPlayerExample/Pods/Target Support Files/FsPlayer";
+			name = FsPlayer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C42A5DA9A4EF0B771E32BB7C372B31FD /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				ADB0C91DA7DB6741A7C2ECFCD488455B /* FsPlayer.podspec */,
+				1771D5F8987E1798A6A366EA7982095E /* LICENSE */,
+				30F43C83557CDF321135E72B9C0FC73B /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -217,15 +228,6 @@
 				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DCA0EA050ADCC42E77F2767626D08423 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				762E2C2E74F57DFCD31C959D33B53CC3 /* FsPlayer.podspec */,
-				DDB1392A01A4DB1918AB7645101E9CAB /* LICENSE */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
@@ -278,7 +280,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E5AA50656EB7DE789619ABFF00558732 /* PBXTargetDependency */,
+				45A977E9F6DEB5B3939628F3168BA0D6 /* PBXTargetDependency */,
 			);
 			name = "Pods-FsPlayerExample";
 			productName = Pods_FsPlayerExample;
@@ -405,11 +407,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E5AA50656EB7DE789619ABFF00558732 /* PBXTargetDependency */ = {
+		45A977E9F6DEB5B3939628F3168BA0D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FsPlayer;
 			target = 6955FB5F687CCF459C5E52B6436D96BF /* FsPlayer */;
-			targetProxy = F585B5C8901DF006B43618C0D9CAEBB3 /* PBXContainerItemProxy */;
+			targetProxy = 0C1E4ABAC1A774946032474FE3951489 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -561,7 +563,7 @@
 		};
 		55CFDAD61BF8E83F594638943E7DAF9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDD2A55193F701E5D1728067E5B90EBC /* FsPlayer.release.xcconfig */;
+			baseConfigurationReference = 2CAE6E2794799D10CF992CE7CB206A34 /* FsPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -761,7 +763,7 @@
 		};
 		D4AAA487080571CD5BEF565DA2D1A49E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22FC589F7547490E1C2DB146DF8A2DE3 /* FsPlayer.debug.xcconfig */;
+			baseConfigurationReference = 34B95B4EC88C1A4926B7A9D5219D6DC9 /* FsPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

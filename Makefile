@@ -1,118 +1,13 @@
-name: FsPlayerExample
+generate:
+	cd FSPlayerExample && xcodegen generate
 
-options:
+install:
+	cd FSPlayerExample && pod install
 
-  createIntermediateGroups: false
+clean:
+	rm -rf FSPlayerExample/Pods
+	rm -f FSPlayerExample/Podfile.lock
+	rm -rf FSPlayerExample/FsPlayerExample.xcodeproj
 
-  groupSortPosition: top
-
-  bundleIdPrefix: com.fabianospdev
-
-  deploymentTarget:
-    iOS: 16.2
-
-  postGenCommand: |
-    echo "Installing CocoaPods dependencies..."
-    pod install
-
-settings:
-
-  base:
-    SWIFT_VERSION: 5.10
-
-  configs:
-
-    Debug:
-      ENABLE_TESTABILITY: YES
-      ONLY_ACTIVE_ARCH: YES
-      SWIFT_OPTIMIZATION_LEVEL: "-Onone"
-
-targets:
-
-  FsPlayerExample:
-
-    type: application
-
-    platform: iOS
-
-    sources:
-      - path: FsPlayerExample
-
-    info:
-      path: FsPlayerExample/Info.plist
-
-    settings:
-
-      base:
-
-        PRODUCT_BUNDLE_IDENTIFIER: com.fabianospdev.fsplayerexample
-
-        PRODUCT_NAME: $(TARGET_NAME)
-
-        DEVELOPMENT_TEAM: 9Z2K5Z7V3C
-
-        INFOPLIST_FILE: FsPlayerExample/Info.plist
-
-        TARGETED_DEVICE_FAMILY: 1
-
-
-  FsPlayerTests:
-
-    type: bundle.unit-test
-
-    platform: iOS
-
-    dependencies:
-      - target: FsPlayerExample
-
-    sources:
-      - path: ../Tests/FsPlayerTests
-
-    info:
-      path: ../Tests/FsPlayerTests/Info.plist
-      group: Tests
-
-
-  FsPlayerUITests:
-
-    type: bundle.ui-testing
-
-    platform: iOS
-
-    dependencies:
-      - target: FsPlayerExample
-
-    sources:
-      - path: ../Tests/FsPlayerUITests
-
-    info:
-      path: ../Tests/FsPlayerUITests/Info.plist
-      group: Tests
-
-    dependencies:
-      - target: FsPlayerExample
-
-
-schemes:
-
-  FsPlayerExample:
-
-    build:
-
-      targets:
-        FsPlayerExample: all
-
-    buildImplicitDependencies: true
-
-    test:
-
-      gatherCoverageData: true
-
-      coverageTargets:
-        - FsPlayerExample
-
-      targets:
-        - name: FsPlayerTests
-
-        - name: FsPlayerUITests
-          parallelizable: true
+setup:
+	cd FSPlayerExample && xcodegen generate
