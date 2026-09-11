@@ -1,14 +1,14 @@
-name: FsPlayerExample
+name: FSPlayerExample
 options:
   createIntermediateGroups: false
   groupSortPosition: top
-  bundleIdPrefix: com.fabianospdev
+  bundIdPrefix: com.fabianospdev
   deploymentTarget:
-    iOS: 16.2
-
-  postGenCommand: |
-    echo "Installing CocoaPods dependencies..."
-    pod install
+    iOS: 16.0
+  
+postGenCommand: |
+  echo "Installing CocoaPods dependencies..."
+  pod install
 
 settings:
   base:
@@ -20,58 +20,54 @@ settings:
       SWIFT_OPTIMIZATION_LEVEL: "-Onone"
 
 targets:
-  FsPlayerExample:
+  FSPlayerExample:
     type: application
     platform: iOS
-    sources:
-      - path: FsPlayerExample
-    info:
-      path: FsPlayerExample/Info.plist
+    sources: 
+      - path: FSPlayerExample
+    info: 
+      path: FSPlayerExample/Info.plist
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.fabianospdev.fsplayerexample
-        PRODUCT_NAME: $(TARGET_NAME)
-        DEVELOPMENT_TEAM: 9Z2K5Z7V3C
-        INFOPLIST_FILE: FsPlayerExample/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.fabianospdev.FSPlayerExample
+        PRODUCT_NAME: ${TARGET_NAME}
+        DEVELOPMENT_TEAM: 9K2X3Z7V4A
+        INFO_PLIST_FILE: FSPlayerExample/Info.plist
         TARGETED_DEVICE_FAMILY: 1
-
-  FsPlayerTests:
+  
+  FSPlayerExampleTests:
     type: bundle.unit-test
     platform: iOS
     dependencies:
-      - target: FsPlayerExample
+      - target: FSPlayerExample
     sources:
-      - path: ../Tests/FsPlayerTests
+      - path: ../Tests/FSPlayerTests
     info:
-      path: ../Tests/FsPlayerTests/Info.plist
+      path: ../Tests/FSPlayerTests/Info.plist
       group: Tests
 
-  FsPlayerUITests:
+  FSPlayerExampleUITests:
     type: bundle.ui-testing
     platform: iOS
     dependencies:
-      - target: FsPlayerExample
+      - target: FSPlayerExample
     sources:
-      - path: ../Tests/FsPlayerUITests
+      - path: ../Tests/FSPlayerUITests
     info:
-      path: ../Tests/FsPlayerUITests/Info.plist
+      path: ../Tests/FSPlayerUITests/Info.plist
       group: Tests
 
-    dependencies:
-      - target: FsPlayerExample
-
 schemes:
-  FsPlayerExample:
+  FSPlayerExample:
     build:
       targets:
-        FsPlayerExample: all
+        FSPlayerExample: all
     buildImplicitDependencies: true
     test:
       gatherCoverageData: true
       coverageTargets:
-        - FsPlayerExample
+        - FSPlayerExample
       targets:
-        - name: FsPlayerTests
-        - name: FsPlayerUITests
+        - mame: FSPlayerTests
+        - name: FSPlayerUITests
           parallelizable: true
-          

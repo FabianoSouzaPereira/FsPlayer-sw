@@ -6,8 +6,8 @@ install:
 
 clean:
 	rm -rf FSPlayerExample/Pods
-	rm -f FSPlayerExample/Podfile.lock
-	rm -rf FSPlayerExample/FsPlayerExample.xcodeproj
+	rm -rf FSPlayerExample/Podfile.lock
+	rm -rf FSPlayerExample/FSPlayerExample.xcodeproj
 
 setup:
 	cd FSPlayerExample && xcodegen generate

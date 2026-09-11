@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD1C32B831A15E7F5D010245"
-               BuildableName = "FsPlayerExample.app"
-               BlueprintName = "FsPlayerExample"
-               ReferencedContainer = "container:FsPlayerExample.xcodeproj">
+               BlueprintIdentifier = "8FA2DE1FCCCDD7AAA3EF1FB9"
+               BuildableName = "FSPlayerExample.app"
+               BlueprintName = "FSPlayerExample"
+               ReferencedContainer = "container:FSPlayerExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,51 +28,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      onlyGenerateCoverageForSpecifiedTargets = "NO">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD1C32B831A15E7F5D010245"
-            BuildableName = "FsPlayerExample.app"
-            BlueprintName = "FsPlayerExample"
-            ReferencedContainer = "container:FsPlayerExample.xcodeproj">
+            BlueprintIdentifier = "8FA2DE1FCCCDD7AAA3EF1FB9"
+            BuildableName = "FSPlayerExample.app"
+            BlueprintName = "FSPlayerExample"
+            ReferencedContainer = "container:FSPlayerExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADD1A564F47D1B3AC2AEA756"
-               BuildableName = "FsPlayerTests.xctest"
-               BlueprintName = "FsPlayerTests"
-               ReferencedContainer = "container:FsPlayerExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DB8513E4543D5BBBA65A119"
-               BuildableName = "FsPlayerUITests.xctest"
-               BlueprintName = "FsPlayerUITests"
-               ReferencedContainer = "container:FsPlayerExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <CommandLineArguments>
-      </CommandLineArguments>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD1C32B831A15E7F5D010245"
-            BuildableName = "FsPlayerExample.app"
-            BlueprintName = "FsPlayerExample"
-            ReferencedContainer = "container:FsPlayerExample.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -88,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD1C32B831A15E7F5D010245"
-            BuildableName = "FsPlayerExample.app"
-            BlueprintName = "FsPlayerExample"
-            ReferencedContainer = "container:FsPlayerExample.xcodeproj">
+            BlueprintIdentifier = "8FA2DE1FCCCDD7AAA3EF1FB9"
+            BuildableName = "FSPlayerExample.app"
+            BlueprintName = "FSPlayerExample"
+            ReferencedContainer = "container:FSPlayerExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -105,10 +72,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD1C32B831A15E7F5D010245"
-            BuildableName = "FsPlayerExample.app"
-            BlueprintName = "FsPlayerExample"
-            ReferencedContainer = "container:FsPlayerExample.xcodeproj">
+            BlueprintIdentifier = "8FA2DE1FCCCDD7AAA3EF1FB9"
+            BuildableName = "FSPlayerExample.app"
+            BlueprintName = "FSPlayerExample"
+            ReferencedContainer = "container:FSPlayerExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
