@@ -1,18 +1,16 @@
 PODS:
-  - FsPlayer (0.1.0):
-    - FsPlayer/Debug (= 0.1.0)
-  - FsPlayer/Debug (0.1.0)
+  - FSPlayer/Debug (0.1.0)
 
 DEPENDENCIES:
-  - FsPlayer (from `../`)
+  - FSPlayer/Debug (from `../`)
 
 EXTERNAL SOURCES:
-  FsPlayer:
+  FSPlayer:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FsPlayer: 2774097808ccb90cc5f60fe8225450ef02b4995a
+  FSPlayer: d3fd8d708d82e5eeae15e5bc13d50bc10bf60cd4
 
-PODFILE CHECKSUM: b05825399c57a8e33977afc1798f4d06892ee9d1
+PODFILE CHECKSUM: 0a4da8bd7ef15795ed6e4ff5c26d398effb8ff84
 
 COCOAPODS: 1.16.2

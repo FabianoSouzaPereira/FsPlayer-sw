@@ -1,17 +1,19 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '16.2'
-project 'FsPlayerExample.xcodeproj'
+project 'FSPlayerExample.xcodeproj'
 
 use_frameworks!
 
-target 'FsPlayerExample' do
-  pod 'FsPlayer', :path => '../'
+target 'FSPlayerExample' do
+  # Compile the local Sources/FSPlayer implementation while developing the framework.
+  pod 'FSPlayer/Debug', :path => '../'
 end
 
-target 'FsPlayerTests' do
+target 'FSPlayerExampleTests' do
   inherit! :search_paths
+  pod 'FSPlayer/Debug', :path => '../'
 end
 
-target 'FsPlayerUITests' do
+target 'FSPlayerExampleUITests' do
   inherit! :search_paths
 end

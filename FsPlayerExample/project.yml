@@ -4,11 +4,8 @@ options:
   groupSortPosition: top
   bundIdPrefix: com.fabianospdev
   deploymentTarget:
-    iOS: 16.0
-  
-postGenCommand: |
-  echo "Installing CocoaPods dependencies..."
-  pod install
+    iOS: 16.2
+  postGenCommand: pod install
 
 settings:
   base:

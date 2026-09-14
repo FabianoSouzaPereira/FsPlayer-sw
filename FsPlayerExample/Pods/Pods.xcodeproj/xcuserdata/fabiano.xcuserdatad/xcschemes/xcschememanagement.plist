@@ -4,22 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FsPlayer.xcscheme</key>
+		<key>FSPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FsPlayerExample.xcscheme</key>
+		<key>Pods-FSPlayerExample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FsPlayerTests.xcscheme</key>
+		<key>Pods-FSPlayerExampleTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FsPlayerUITests.xcscheme</key>
+		<key>Pods-FSPlayerExampleUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

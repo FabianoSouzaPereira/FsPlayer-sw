@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "24470A01D6042F6DB271096100817FCA"
-               BuildableName = "Pods_FsPlayerExample.framework"
-               BlueprintName = "Pods-FsPlayerExample"
+               BlueprintIdentifier = "B832D304E2E5707AA0FB2197CF6D3173"
+               BuildableName = "Pods_FSPlayerExample.framework"
+               BlueprintName = "Pods-FSPlayerExample"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

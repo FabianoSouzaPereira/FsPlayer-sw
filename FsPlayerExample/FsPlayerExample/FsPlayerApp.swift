@@ -1,6 +1,6 @@
 //
-//  FsPlayerApp.swift
-//  FsPlayer
+//  FSPlayerApp.swift
+//  FSPlayer
 //
 //  Created by Fabiano on 26/05/26.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct FsPlayerApp: App {
+struct FSPlayerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

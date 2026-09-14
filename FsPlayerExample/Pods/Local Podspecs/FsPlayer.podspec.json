@@ -1,15 +1,15 @@
 {
-  "name": "FsPlayer",
+  "name": "FSPlayer",
   "version": "0.1.0",
-  "summary": "Modern video player framework for iOS.",
-  "description": "FsPlayer is a modular and modern video playback framework\nbuilt with Swift and SwiftUI.",
+  "summary": "Modern video player framework for iOs.",
+  "description": "FSPlayer is a modular and modern video player framework built with Swift and SwiftUI. \nIt provides a simple API for playback control.",
   "homepage": "https://github.com/FabianoSouzaPereira/FsPlayer-sw",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Fabiano Pereira": "jeovajire2003@gmail.com"
+    "Fabiano Souza Pereira": "jeovajire2003@gmail.com"
   },
   "platforms": {
     "ios": "16.2"
@@ -19,31 +19,24 @@
     "tag": "0.1.0"
   },
   "swift_versions": "5.10",
-  "source_files": "Sources/FsPlayer/**/*.{swift}",
   "frameworks": [
+    "Foundation",
+    "UIKit",
     "AVFoundation",
-    "UIKit"
+    "SwiftUI",
+    "Combine"
   ],
-  "pod_target_xcconfig": {
-    "ENABLE_BITCODE": "NO",
-    "BUILD_LIBRARY_FOR_DISTRIBUTION": "YES",
-    "SWIFT_VERSION": "5.10",
-    "IPHONEOS_DEPLOYMENT_TARGET": "16.2",
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-  },
   "default_subspecs": "Debug",
   "subspecs": [
     {
-      "name": "Release",
-      "vendored_frameworks": "FsPlayer.xcframework",
-      "resources": "Sources/FsPlayer/Resources/**/*.{plist,xib,json,ttf,xcassets,strings,xcassets}",
-      "dependencies": {}
+      "name": "Binary",
+      "vendored_frameworks": "FSPlayer.xcframework",
+      "resources": "Sources/FSPlayer/Resources/**/*.{plist,xib,json,ttf,xcassets,strings}"
     },
     {
       "name": "Debug",
-      "vendored_frameworks": "FsPlayer.xcframework",
-      "resources": "Sources/FsPlayer/Resources/**/*.{swift,plist,xib,json,ttf,xcassets,strings,xcassets}",
-      "dependencies": {}
+      "source_files": "Sources/FSPlayer/**/*.swift",
+      "resources": "Sources/FSPlayer/Resources/**/*.{plist,xib,json,ttf,xcassets,strings}"
     }
   ],
   "swift_version": "5.10"

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_FsPlayerExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_FsPlayerExampleVersionString[];
+FOUNDATION_EXPORT double Pods_FSPlayerExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_FSPlayerExampleVersionString[];
 

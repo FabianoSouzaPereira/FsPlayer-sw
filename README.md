@@ -1,6 +1,6 @@
-# FsPlayer
+# FSPlayer
 
-**FsPlayer** is a modern and modular video playback framework for iOS, built with Swift and designed to provide a flexible foundation for video playback features.
+**FSPlayer** is a modern and modular video playback framework for iOS, built with Swift and designed to provide a flexible foundation for video playback features.
 
 The project uses **CocoaPods** for dependency management and **XcodeGen** to generate the Xcode project for the example application.
 
@@ -19,24 +19,24 @@ The project uses **CocoaPods** for dependency management and **XcodeGen** to gen
 ## Project Structure
 
 ```text
-FsPlayer/
+FSPlayer/
 │
 ├── Sources/
-│   └── FsPlayer/
+│   └── FSPlayer/
 │       ├── ...
 │       └── Resources/
 │
 ├── Tests/
-│   ├── FsPlayerTests/
-│   └── FsPlayerUITests/
+│   ├── FSPlayerTests/
+│   └── FSPlayerUITests/
 │
 ├── Example/
 │   ├── project.yml
 │   ├── Podfile
-│   └── FsPlayerExample/
+│   └── FSPlayerExample/
 │
-├── FsPlayer.xcframework/
-├── FsPlayer.podspec
+├── FSPlayer.xcframework/
+├── FSPlayer.podspec
 ├── LICENSE
 ├── README.md
 └── Makefile
@@ -44,7 +44,7 @@ FsPlayer/
 
 ### Sources
 
-The `Sources` directory contains the source code for the FsPlayer framework.
+The `Sources` directory contains the source code for the FSPlayer framework.
 
 ### Tests
 
@@ -52,28 +52,28 @@ The `Tests` directory contains the unit tests and UI tests for the project.
 
 ### Example
 
-The `Example` directory contains the sample application used to develop, test, and validate FsPlayer.
+The `Example` directory contains the sample application used to develop, test, and validate FSPlayer.
 
 It also contains:
 
 * `project.yml` — XcodeGen project specification
 * `Podfile` — CocoaPods configuration
-* `FsPlayerExample` — Example application source code
+* `FSPlayerExample` — Example application source code
 
 ---
 
 # Installation
 
-FsPlayer supports two different ways of being consumed through CocoaPods.
+FSPlayer supports two different ways of being consumed through CocoaPods.
 
 ## Binary Distribution
 
-By default, FsPlayer is distributed as a prebuilt XCFramework.
+By default, FSPlayer is distributed as a prebuilt XCFramework.
 
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'FsPlayer'
+pod 'FSPlayer'
 ```
 
 Then run:
@@ -92,19 +92,19 @@ open YourProject.xcworkspace
 
 ## Development Version
 
-For development and debugging, you can use the source-based version of FsPlayer.
+For development and debugging, you can use the source-based version of FSPlayer.
 
 Add the `Debug` subspec:
 
 ```ruby
-pod 'FsPlayer/Debug'
+pod 'FSPlayer/Debug'
 ```
 
 This version uses the framework's Swift source files directly.
 
 This is useful when you need to:
 
-* Develop FsPlayer
+* Develop FSPlayer
 * Debug the framework implementation
 * Inspect the source code
 * Test changes directly in the example application
@@ -113,12 +113,12 @@ This is useful when you need to:
 
 # Local Development
 
-The repository includes an example application that uses FsPlayer through a local CocoaPods dependency.
+The repository includes an example application that uses FSPlayer through a local CocoaPods dependency.
 
 The `Podfile` inside the `Example` directory uses:
 
 ```ruby
-pod 'FsPlayer', :path => '../'
+pod 'FSPlayer', :path => '../'
 ```
 
 This allows the example application to use the local version of the framework while it is being developed.
@@ -147,7 +147,7 @@ After the project is generated, CocoaPods installs the project dependencies.
 The generated workspace can then be opened with:
 
 ```bash
-open FsPlayerExample.xcworkspace
+open FSPlayerExample.xcworkspace
 ```
 
 ---
@@ -186,7 +186,7 @@ Removes generated files and CocoaPods dependencies.
 
 # XcodeGen
 
-FsPlayer uses XcodeGen to generate the Xcode project for the example application.
+FSPlayer uses XcodeGen to generate the Xcode project for the example application.
 
 The `project.yml` file defines:
 
@@ -199,18 +199,18 @@ The `project.yml` file defines:
 
 XcodeGen is used only to generate the Xcode project for the example application and its test targets.
 
-It does not directly generate the FsPlayer framework.
+It does not directly generate the FSPlayer framework.
 
 ---
 
 # CocoaPods
 
-CocoaPods is responsible for integrating FsPlayer into the example application and into projects that consume the framework.
+CocoaPods is responsible for integrating FSPlayer into the example application and into projects that consume the framework.
 
 The framework configuration is defined in:
 
 ```text
-FsPlayer.podspec
+FSPlayer.podspec
 ```
 
 The Podspec contains information such as:
@@ -229,18 +229,18 @@ The Podspec contains information such as:
 
 # Binary and Debug Subspecs
 
-FsPlayer supports two different consumption strategies.
+FSPlayer supports two different consumption strategies.
 
 ## Default Binary Version
 
 ```ruby
-pod 'FsPlayer'
+pod 'FSPlayer'
 ```
 
 This installs the prebuilt:
 
 ```text
-FsPlayer.xcframework
+FSPlayer.xcframework
 ```
 
 This is the default option intended for normal framework consumption.
@@ -250,20 +250,20 @@ This is the default option intended for normal framework consumption.
 ## Debug Version
 
 ```ruby
-pod 'FsPlayer/Debug'
+pod 'FSPlayer/Debug'
 ```
 
-This version uses the FsPlayer source code directly.
+This version uses the FSPlayer source code directly.
 
 ```text
-Sources/FsPlayer/
+Sources/FSPlayer/
 ```
 
 This is intended for framework development and debugging.
 
 > The `Binary` and `Debug` subspecs should not be confused with Xcode's Debug and Release build configurations.
 
-They represent different ways of consuming the FsPlayer framework through CocoaPods.
+They represent different ways of consuming the FSPlayer framework through CocoaPods.
 
 ---
 
@@ -275,7 +275,7 @@ The typical development workflow looks like this:
 Developer
     │
     ▼
-Modify FsPlayer source code
+Modify FSPlayer source code
     │
     ▼
 Generate the Example project with XcodeGen
@@ -284,7 +284,7 @@ Generate the Example project with XcodeGen
 Install dependencies with CocoaPods
     │
     ▼
-Build and run FsPlayerExample
+Build and run FSPlayerExample
     │
     ▼
 Run tests
@@ -296,7 +296,7 @@ The example application allows the framework to be tested in a real application 
 
 # License
 
-FsPlayer is available under the MIT License.
+FSPlayer is available under the MIT License.
 
 See the [LICENSE](LICENSE) file for more information.
 

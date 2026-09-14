@@ -1,5 +1,5 @@
-framework module Pods_FsPlayerExample {
-  umbrella header "Pods-FsPlayerExample-umbrella.h"
+framework module Pods_FSPlayerExample {
+  umbrella header "Pods-FSPlayerExample-umbrella.h"
 
   export *
   module * { export * }
