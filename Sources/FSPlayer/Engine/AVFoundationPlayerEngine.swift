@@ -8,11 +8,20 @@
 import AVFoundation
 import Foundation
 
-final class AVFoundationPlayerEngine: PlayerEngine {
+final class AVFoundationPlayerEngine: PlayerEngine, PlayerVideoOutput {
     weak var delegate: PlayerEngineDelegate?
 
-    let avPlayer = AVPlayer()
+    var isMuted: Bool {
+        get { avPlayer.isMuted }
+        set { avPlayer.isMuted = newValue }
+    }
 
+    var volume: Float {
+        get { avPlayer.volume }
+        set { avPlayer.volume = min(max(newValue, 0), 1) }
+    }
+
+    private let avPlayer = AVPlayer()
     private var timeObserver: Any?
     private var observations: [NSKeyValueObservation] = []
     private var endObserver: NSObjectProtocol?
@@ -20,6 +29,22 @@ final class AVFoundationPlayerEngine: PlayerEngine {
 
     init(configuration: PlayerConfiguration) {
         apply(configuration)
+    }
+
+    func prepareForPlayback() {
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setCategory(.playback, mode: .moviePlayback, options: [.allowAirPlay])
+            try session.setActive(true)
+        } catch {
+            // Playback can continue with the system default session.
+        }
+    }
+
+    func attach(to layer: AVPlayerLayer) {
+        if layer.player !== avPlayer {
+            layer.player = avPlayer
+        }
     }
 
     deinit {

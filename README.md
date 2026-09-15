@@ -46,19 +46,34 @@ If another type named `Player` is in scope, qualify it as `FSPlayer.Player`.
 
 ---
 
+## Architecture
+
+`Player` is the public session (`ObservableObject`). Apps hold that type and pass it to `PlayerView`. Playback talks to an internal `PlayerEngine`; the default implementation is `AVFoundationPlayerEngine`. `AVPlayer` stays inside that engine. The SwiftUI layer binds video with `attachVideo(to:)`, not by reading the player object.
+
+Mute, volume, and the audio session go through the engine protocol. Tests inject `FakePlayerEngine` (`@testable`) so load / play / pause / seek / mute do not need a real `AVPlayer`.
+
+This repository is the playback kernel plus a harness. Login, session, other services, and VIPER modules belong in the **consuming app**, not here.
+
+---
+
 ## Project Structure
 
 ```text
 FSPlayer/
-├── Sources/FSPlayer/          # Framework source
+├── Sources/FSPlayer/
+│   ├── Player.swift           # Public session
+│   ├── Engine/                # PlayerEngine + AVFoundation implementation
+│   ├── UI/                    # PlayerView, controls, poster, buffering
+│   ├── Models/
+│   ├── Core/
 │   └── Resources/             # buffering.json, etc.
 ├── Tests/
-│   ├── FSPlayerTests/
+│   ├── FSPlayerTests/         # Includes FakePlayerEngine
 │   └── FSPlayerUITests/
-├── FSPlayerExample/
+├── FSPlayerExample/           # Dumb host: run the module and tests only
 │   ├── project.yml            # XcodeGen spec (`postGenCommand: pod install`)
 │   ├── Podfile
-│   └── FSPlayerExample/       # Example app source
+│   └── FSPlayerExample/
 ├── Vendor/
 │   └── LottieXCFramework.podspec
 ├── FSPlayer.xcframework/      # Prebuilt Binary distribution (`make generate`)
@@ -109,7 +124,9 @@ Use Debug to develop FSPlayer, step through its implementation, or try source ch
 
 ## Local Development
 
-The example app is the development host. Its Podfile compiles local sources on purpose:
+`FSPlayerExample` is a dumb host: it instantiates `Player`, shows `PlayerView`, and runs the test targets. It must not grow product features (login, networking, VIPER screens). Those live in the app that consumes the pod.
+
+The example Podfile compiles local sources on purpose:
 
 ```ruby
 pod 'FSPlayer/Debug', :path => '../'

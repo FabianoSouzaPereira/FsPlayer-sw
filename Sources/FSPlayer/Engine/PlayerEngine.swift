@@ -14,7 +14,10 @@ protocol PlayerEngineDelegate: AnyObject {
 
 protocol PlayerEngine: AnyObject {
     var delegate: PlayerEngineDelegate? { get set }
+    var isMuted: Bool { get set }
+    var volume: Float { get set }
 
+    func prepareForPlayback()
     func load(_ item: PlayerItem)
     func play()
     func pause()

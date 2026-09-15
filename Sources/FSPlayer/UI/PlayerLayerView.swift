@@ -15,15 +15,13 @@ struct PlayerLayerView: UIViewRepresentable {
     func makeUIView(context: Context) -> PlayerContainerView {
         let view = PlayerContainerView()
         view.backgroundColor = .black
-        view.playerLayer.player = player.engine.avPlayer
+        player.attachVideo(to: view.playerLayer)
         view.playerLayer.videoGravity = player.videoGravity.avGravity
         return view
     }
 
     func updateUIView(_ uiView: PlayerContainerView, context: Context) {
-        if uiView.playerLayer.player !== player.engine.avPlayer {
-            uiView.playerLayer.player = player.engine.avPlayer
-        }
+        player.attachVideo(to: uiView.playerLayer)
         uiView.playerLayer.videoGravity = player.videoGravity.avGravity
     }
 }

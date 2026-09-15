@@ -10,14 +10,6 @@ import XCTest
 
 final class FSPlayerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testPlayerItemStoresURLAndTitle() {
         let url = URL(string: "https://example.com/video.m3u8")!
         let item = PlayerItem(url: url, title: "Demo")
@@ -40,11 +32,59 @@ final class FSPlayerTests: XCTestCase {
         XCTAssertFalse(PlaybackState.paused.isPlaying)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testPlayerLoadForwardsItemToEngine() {
+        let engine = FakePlayerEngine()
+        let item = PlayerItem(url: URL(string: "https://example.com/a.m3u8")!, title: "A")
+        let player = Player(engine: engine)
+
+        player.load(item)
+
+        XCTAssertEqual(player.currentItem, item)
+        XCTAssertEqual(player.state, .loading)
+        XCTAssertEqual(engine.loadedItems, [item])
+        XCTAssertTrue(engine.didPrepare)
     }
 
+    func testPlayerPlayPauseAndToggleUseEngine() {
+        let engine = FakePlayerEngine()
+        let player = Player(engine: engine)
+
+        player.play()
+        XCTAssertEqual(engine.playCount, 1)
+        XCTAssertEqual(player.state, .playing)
+
+        player.togglePlayPause()
+        XCTAssertEqual(engine.pauseCount, 1)
+        XCTAssertEqual(player.state, .paused)
+
+        player.togglePlayPause()
+        XCTAssertEqual(engine.playCount, 2)
+    }
+
+    func testPlayerPlayAfterEndedSeeksToStart() {
+        let engine = FakePlayerEngine()
+        let player = Player(engine: engine)
+        engine.delegate?.engineDidChangeState(.ended)
+
+        player.play()
+
+        XCTAssertEqual(engine.seekTimes, [0])
+        XCTAssertEqual(engine.playCount, 1)
+    }
+
+    func testPlayerMuteAndVolumeGoThroughEngine() {
+        let engine = FakePlayerEngine()
+        let configuration = PlayerConfiguration(isMuted: true, volume: 0.4)
+        let player = Player(configuration: configuration, engine: engine)
+
+        XCTAssertEqual(engine.appliedConfigurations.last?.isMuted, true)
+        XCTAssertEqual(engine.appliedConfigurations.last?.volume, 0.4)
+
+        player.isMuted = false
+        player.volume = 2
+
+        XCTAssertFalse(engine.isMuted)
+        XCTAssertEqual(engine.volume, 1)
+        XCTAssertEqual(player.volume, 1)
+    }
 }

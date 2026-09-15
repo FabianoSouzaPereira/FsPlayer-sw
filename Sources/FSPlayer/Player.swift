@@ -18,24 +18,39 @@ public final class Player: ObservableObject {
     @Published public private(set) var currentItem: PlayerItem?
 
     public var isMuted: Bool {
-        didSet { engine.avPlayer.isMuted = isMuted }
+        didSet { engine.isMuted = isMuted }
     }
 
     public var volume: Float {
-        didSet { engine.avPlayer.volume = min(max(volume, 0), 1) }
+        didSet {
+            let clamped = min(max(volume, 0), 1)
+            if volume != clamped {
+                volume = clamped
+            }
+            engine.volume = clamped
+        }
     }
 
     public var videoGravity: VideoGravity
 
-    let engine: AVFoundationPlayerEngine
+    private let engine: PlayerEngine
 
-    public init(item: PlayerItem? = nil, configuration: PlayerConfiguration = .default) {
+    public convenience init(item: PlayerItem? = nil, configuration: PlayerConfiguration = .default) {
+        self.init(
+            item: item,
+            configuration: configuration,
+            engine: AVFoundationPlayerEngine(configuration: configuration)
+        )
+    }
+
+    init(item: PlayerItem? = nil, configuration: PlayerConfiguration = .default, engine: PlayerEngine) {
         self.isMuted = configuration.isMuted
         self.volume = configuration.volume
         self.videoGravity = configuration.videoGravity
-        self.engine = AVFoundationPlayerEngine(configuration: configuration)
+        self.engine = engine
         self.engine.delegate = self
-        Self.activateAudioSession()
+        self.engine.apply(configuration)
+        self.engine.prepareForPlayback()
 
         if let item {
             load(item)
@@ -82,14 +97,8 @@ public final class Player: ObservableObject {
         state = .paused
     }
 
-    private static func activateAudioSession() {
-        do {
-            let session = AVAudioSession.sharedInstance()
-            try session.setCategory(.playback, mode: .moviePlayback, options: [.allowAirPlay])
-            try session.setActive(true)
-        } catch {
-            // Playback can continue with the system default session.
-        }
+    func attachVideo(to layer: AVPlayerLayer) {
+        (engine as? PlayerVideoOutput)?.attach(to: layer)
     }
 }
 
