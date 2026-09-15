@@ -1,18 +1,48 @@
 # FSPlayer
 
-**FSPlayer** is a modern and modular video playback framework for iOS, built with Swift and designed to provide a flexible foundation for video playback features.
+**FSPlayer** is a modular video playback framework for iOS, built with Swift and SwiftUI.
 
-The project uses **CocoaPods** for dependency management and **XcodeGen** to generate the Xcode project for the example application.
+The public type is `Player` (the module is `FSPlayer`). CocoaPods manages dependencies. XcodeGen generates the example app project.
 
 ---
 
 ## Requirements
 
 * iOS 16.2+
-* Swift 5.10+
-* Xcode
+* Swift 5.10
+* Xcode 14.2+ (Lottie's vendored xcframework is the official Xcode 14.1 build)
 * CocoaPods
 * XcodeGen
+
+---
+
+## Usage
+
+```swift
+import FSPlayer
+import SwiftUI
+
+struct ContentView: View {
+    @StateObject private var player = Player(
+        item: PlayerItem(
+            url: URL(string: "https://example.com/video.m3u8")!,
+            title: "Demo",
+            artworkURL: URL(string: "https://example.com/poster.jpg")
+        )
+    )
+
+    var body: some View {
+        PlayerView(player: player)
+            .ignoresSafeArea()
+            .onAppear { player.play() }
+            .onDisappear { player.pause() }
+    }
+}
+```
+
+`PlayerItem.artworkURL` is optional. When present, Kingfisher loads the poster. Lottie renders the buffering animation.
+
+If another type named `Player` is in scope, qualify it as `FSPlayer.Player`.
 
 ---
 
@@ -20,315 +50,138 @@ The project uses **CocoaPods** for dependency management and **XcodeGen** to gen
 
 ```text
 FSPlayer/
-│
-├── Sources/
-│   └── FSPlayer/
-│       ├── ...
-│       └── Resources/
-│
+├── Sources/FSPlayer/          # Framework source
+│   └── Resources/             # buffering.json, etc.
 ├── Tests/
 │   ├── FSPlayerTests/
 │   └── FSPlayerUITests/
-│
-├── Example/
-│   ├── project.yml
+├── FSPlayerExample/
+│   ├── project.yml            # XcodeGen spec (`postGenCommand: pod install`)
 │   ├── Podfile
-│   └── FSPlayerExample/
-│
+│   └── FSPlayerExample/       # Example app source
 ├── Vendor/
 │   └── LottieXCFramework.podspec
-├── FSPlayer.xcframework/
-├── FSPlayer.podspec
+├── FSPlayer.xcframework/      # Prebuilt Binary distribution (`make generate`)
+├── FsPlayer.podspec
 ├── LICENSE
 ├── README.md
 └── Makefile
 ```
 
-### Sources
-
-The `Sources` directory contains the source code for the FSPlayer framework.
-
-### Tests
-
-The `Tests` directory contains the unit tests and UI tests for the project.
-
-### Example
-
-The `Example` directory contains the sample application used to develop, test, and validate FSPlayer.
-
-It also contains:
-
-* `project.yml` — XcodeGen project specification
-* `Podfile` — CocoaPods configuration
-* `FSPlayerExample` — Example application source code
+`Pods/` is gitignored. After a clone, run `make generate` (or `make project`) before opening Xcode.
 
 ---
 
-# Installation
+## Installation
 
-FSPlayer supports two different ways of being consumed through CocoaPods.
+FSPlayer is not on CocoaPods trunk yet. Point CocoaPods at this repository (or a local checkout) and at the Lottie wrapper spec. `LottieXCFramework` is **not** on trunk; `pod 'FSPlayer'` alone will not resolve it.
 
-## Binary Distribution
+### Binary (apps that consume FSPlayer)
 
-By default, FSPlayer is distributed as a prebuilt XCFramework.
-
-Add the following to your `Podfile`:
+Default when `FSPlayer.xcframework` is present in the pod. Use this in production apps.
 
 ```ruby
-pod 'FSPlayer'
+pod 'FSPlayer', :git => 'https://github.com/FabianoSouzaPereira/FsPlayer-sw.git', :tag => '0.1.0'
+pod 'LottieXCFramework', :podspec => 'Vendor/LottieXCFramework.podspec'
 ```
 
-Then run:
+Copy `Vendor/LottieXCFramework.podspec` into the consuming app (or point `:podspec` at a checkout of this repo). Then:
 
 ```bash
 pod install
-```
-
-Open the generated workspace:
-
-```bash
 open YourProject.xcworkspace
 ```
 
----
+Until the xcframework exists in the pod, `pod 'FSPlayer'` falls back to the Debug subspec.
 
-## Development Version
-
-For development and debugging, you can use the source-based version of FSPlayer.
-
-Add the `Debug` subspec:
+### Debug (compile FSPlayer from source)
 
 ```ruby
-pod 'FSPlayer/Debug'
+pod 'FSPlayer/Debug', :git => 'https://github.com/FabianoSouzaPereira/FsPlayer-sw.git', :tag => '0.1.0'
+pod 'LottieXCFramework', :podspec => 'Vendor/LottieXCFramework.podspec'
 ```
 
-This version uses the framework's Swift source files directly.
+Use Debug to develop FSPlayer, step through its implementation, or try source changes. Do not switch the example app to Binary as a “production” step.
 
-This is useful when you need to:
-
-* Develop FSPlayer
-* Debug the framework implementation
-* Inspect the source code
-* Test changes directly in the example application
+> `Binary` and `Debug` are CocoaPods subspecs. They are not Xcode’s Debug and Release configurations.
 
 ---
 
-# Local Development
+## Local Development
 
-The repository includes an example application that uses FSPlayer through a local CocoaPods dependency.
-
-The `Podfile` inside the `Example` directory uses:
-
-```ruby
-pod 'FSPlayer', :path => '../'
-```
-
-This allows the example application to use the local version of the framework while it is being developed.
-
----
-
-# Generating the Xcode Project
-
-From the repository root, run:
-
-```bash
-make generate
-```
-
-That single command generates the example project, installs CocoaPods dependencies, and builds `FSPlayer.xcframework`.
-
-The XcodeGen specification is:
-
-```text
-FSPlayerExample/project.yml
-```
-
-Open the generated workspace:
-
-```bash
-open FSPlayerExample/FSPlayerExample.xcworkspace
-```
-
----
-
-# Using the Makefile
-
-The project can also provide commands that allow you to work from the repository root.
-
-For example:
-
-```bash
-make generate
-```
-
-This is the only command needed to prepare the project. It:
-
-* Generates the example Xcode project with XcodeGen
-* Installs CocoaPods dependencies (Kingfisher from source, Lottie xcframework into `Pods/`)
-* Builds `FSPlayer.xcframework` at the repository root
-
-After it finishes, open `FSPlayerExample/FSPlayerExample.xcworkspace`. When the xcframework exists, `pod 'FSPlayer'` defaults to the Binary subspec. The example app still uses `pod 'FSPlayer/Debug'` so you keep compiling the player from source.
-
-```bash
-make clean
-```
-
-Removes generated files and CocoaPods dependencies.
-
----
-
-# XcodeGen
-
-FSPlayer uses XcodeGen to generate the Xcode project for the example application.
-
-The `project.yml` file defines:
-
-* The example application target
-* Unit test targets
-* UI test targets
-* Build settings
-* Schemes
-* Code coverage configuration
-
-XcodeGen is used only to generate the Xcode project for the example application and its test targets.
-
-It does not directly generate the FSPlayer framework.
-
----
-
-# CocoaPods
-
-CocoaPods is responsible for integrating FSPlayer into the example application and into projects that consume the framework.
-
-The framework configuration is defined in:
-
-```text
-FSPlayer.podspec
-```
-
-The Podspec contains information such as:
-
-* Framework name
-* Version
-* Supported iOS version
-* Swift version
-* Required Apple frameworks
-* Source repository
-* License
-* Binary framework configuration
-* Source-based development configuration
-* Third-party source dependency (Kingfisher)
-* Third-party binary dependency (LottieXCFramework)
-
----
-
-# Third-party Frameworks
-
-FSPlayer demonstrates two CocoaPods inclusion patterns. Both are declared on the root of `FSPlayer.podspec`, so the `Binary` and `Debug` subspecs inherit them.
-
-```ruby
-spec.dependency 'Kingfisher', '>= 8.0', '< 8.5'
-spec.dependency 'LottieXCFramework', '4.4.3'
-```
-
-## Source dependency
-
-Kingfisher is compiled from source. It lives on CocoaPods trunk, so it is **not** listed in the example `Podfile`. CocoaPods downloads the Swift sources into `Pods/Kingfisher`.
-
-The player uses Kingfisher to load the optional `PlayerItem.artworkURL` poster image.
-
-Kingfisher is pinned below 8.5 because 8.5+ uses the iOS 17 `Transition` protocol and does not compile against the iOS 16.2 SDK.
-
-## Binary dependency
-
-Lottie is consumed as a prebuilt xcframework, not as `pod 'lottie-ios'` (that pod would compile from source and conflict with the binary).
-
-Because the xcframework is not on trunk, the example `Podfile` points CocoaPods at the local wrapper spec. CocoaPods then downloads the zip into `Pods/`:
+The example app is the development host. Its Podfile compiles local sources on purpose:
 
 ```ruby
 pod 'FSPlayer/Debug', :path => '../'
 pod 'LottieXCFramework', :podspec => '../Vendor/LottieXCFramework.podspec'
 ```
 
-The player uses Lottie to render the buffering animation.
+`:path` means this checkout, not a production install. Keep `/Debug` here so edits under `Sources/FSPlayer` show up on the next build. `pod 'FSPlayer', :path => '../'` would link the root xcframework instead, and source changes would not appear until `make generate` rebuilds it.
 
-The wrapper downloads Lottie 4.4.3's official `Lottie-Xcode-14.1.xcframework.zip`, which matches this project's Xcode 14 / iOS 16 SDK. Later Lottie xcframeworks are built with a newer Swift and will not import.
+From the repository root:
 
-After `pod install`, the navigator should show:
-
-* `Pods/Pods/Kingfisher` — source
-* `Pods/Pods/LottieXCFramework` — `Lottie.xcframework`
-
----
-
-# Binary and Debug Subspecs
-
-FSPlayer supports two different consumption strategies.
-
-## Default Binary Version
-
-```ruby
-pod 'FSPlayer'
+```bash
+make generate
+open FSPlayerExample/FSPlayerExample.xcworkspace
 ```
 
-This installs the prebuilt:
+| Command | What it does |
+|---|---|
+| `make generate` | XcodeGen + `pod install`, then builds `FSPlayer.xcframework` at the repo root |
+| `make project` | XcodeGen + `pod install` only (enough to run the example) |
+| `make clean` | Deletes `FSPlayerExample/Pods`, `Podfile.lock`, the generated `.xcodeproj` / `.xcworkspace`, and `.build/` |
+
+`make generate` is what you run after a fresh clone. Use `make project` when you only need the example and do not want to re-archive the xcframework.
+
+XcodeGen reads `FSPlayerExample/project.yml`. It generates the example app and test targets only. It does not generate the FSPlayer module; CocoaPods compiles `Sources/FSPlayer` through the Debug subspec (or the Makefile archives that pod target into the xcframework).
+
+Typical loop:
 
 ```text
-FSPlayer.xcframework
-```
-
-This is the default option when that xcframework is present. `make generate` builds it. Until then, `pod 'FSPlayer'` falls back to Debug.
-
----
-
-## Debug Version
-
-```ruby
-pod 'FSPlayer/Debug'
-```
-
-This version uses the FSPlayer source code directly.
-
-```text
-Sources/FSPlayer/
-```
-
-This is intended for framework development and debugging.
-
-> The `Binary` and `Debug` subspecs should not be confused with Xcode's Debug and Release build configurations.
-
-They represent different ways of consuming the FSPlayer framework through CocoaPods.
-
----
-
-# Development Workflow
-
-The typical development workflow looks like this:
-
-```text
-Developer
-    │
-    ▼
-Modify FSPlayer source code
-    │
-    ▼
-Generate the Example project with XcodeGen
-    │
-    ▼
-Install dependencies with CocoaPods
-    │
-    ▼
+Edit Sources/FSPlayer
+        │
+        ▼
 Build and run FSPlayerExample
-    │
-    ▼
+        │
+        ▼
 Run tests
 ```
 
-The example application allows the framework to be tested in a real application environment while it is being developed.
+Re-run `make project` after Podfile or `project.yml` changes. Re-run `make generate` when you need a fresh `FSPlayer.xcframework`.
 
 ---
 
-# License
+## CocoaPods
+
+`FsPlayer.podspec` defines the pod: name, version `0.1.0`, iOS 16.2, Swift 5.10, Apple frameworks, git source, Binary vs Debug, and third-party dependencies.
+
+```ruby
+spec.dependency 'Kingfisher', '>= 8.0', '< 8.5'
+spec.dependency 'LottieXCFramework', '4.4.3'
+```
+
+Both sit on the root spec, so Binary and Debug inherit them.
+
+### Kingfisher (source)
+
+Compiled from CocoaPods trunk. It is **not** listed in the example Podfile. CocoaPods puts the Swift sources in `FSPlayerExample/Pods/Kingfisher`.
+
+Pinned below 8.5 because 8.5+ uses the iOS 17 `Transition` protocol and does not compile against the iOS 16.2 SDK.
+
+### Lottie (binary xcframework)
+
+Consumed as a prebuilt xcframework, not as `pod 'lottie-ios'` (that pod compiles from source and conflicts with the binary).
+
+The wrapper downloads Lottie 4.4.3’s official `Lottie-Xcode-14.1.xcframework.zip` (`module_name` is `Lottie`). Later official xcframeworks are built with a newer Swift and will not import in this SDK.
+
+After `pod install`, on disk:
+
+* `FSPlayerExample/Pods/Kingfisher` — source
+* `FSPlayerExample/Pods/LottieXCFramework` — `Lottie.xcframework`
+
+---
+
+## License
 
 FSPlayer is available under the MIT License.
 
@@ -336,7 +189,7 @@ See the [LICENSE](LICENSE) file for more information.
 
 ---
 
-# Author
+## Author
 
 **Fabiano Pereira**
 
