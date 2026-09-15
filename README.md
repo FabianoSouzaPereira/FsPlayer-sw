@@ -8,11 +8,11 @@ The public type is `Player` (the module is `FSPlayer`). CocoaPods manages depend
 
 ## Requirements
 
-* iOS 16.2+
-* Swift 5.10
-* Xcode 14.2+ (Lottie's vendored xcframework is the official Xcode 14.1 build)
-* CocoaPods
-* XcodeGen
+- iOS 16.2+
+- Swift 5.10
+- Xcode 14.2+ (Lottie's vendored xcframework is the official Xcode 14.1 build)
+- CocoaPods
+- XcodeGen
 
 ---
 
@@ -69,6 +69,8 @@ The host app should include `UIBackgroundModes` → `audio` so Now Playing survi
 
 ---
 
+
+
 ## Architecture
 
 `Player` is the public session (`ObservableObject`). Apps hold that type and pass it to `PlayerView`. Playback talks to an internal `PlayerEngine`; the default implementation is `AVFoundationPlayerEngine`. `AVPlayer` stays inside that engine. The SwiftUI layer binds video with `attachVideo(to:)`, not by reading the player object.
@@ -82,6 +84,8 @@ Mute, volume, and the audio session go through the engine protocol. Tests inject
 Login, session, other services, and VIPER modules belong in the **consuming app**, not here.
 
 ---
+
+
 
 ## Project Structure
 
@@ -116,6 +120,8 @@ FSPlayer/
 `Pods/` is gitignored. After a clone, run `make generate` (or `make project`) before opening Xcode.
 
 ---
+
+
 
 ## Installation
 
@@ -152,6 +158,8 @@ Use Debug to develop FSPlayer, step through its implementation, or try source ch
 
 ---
 
+
+
 ## Local Development
 
 `FSPlayerExample` is a dumb host: it instantiates `Player`, shows `PlayerView`, and runs the test targets. It must not grow product features (login, networking, VIPER screens). Those live in the app that consumes the pod.
@@ -172,11 +180,13 @@ make generate
 open FSPlayerExample/FSPlayerExample.xcworkspace
 ```
 
-| Command | What it does |
-|---|---|
-| `make generate` | XcodeGen + `pod install`, then builds `FSPlayer.xcframework` at the repo root |
-| `make project` | XcodeGen + `pod install` only (enough to run the example) |
-| `make clean` | Deletes `FSPlayerExample/Pods`, `Podfile.lock`, the generated `.xcodeproj` / `.xcworkspace`, and `.build/` |
+
+| Command         | What it does                                                                                               |
+| --------------- | ---------------------------------------------------------------------------------------------------------- |
+| `make generate` | XcodeGen + `pod install`, then builds `FSPlayer.xcframework` at the repo root                              |
+| `make project`  | XcodeGen + `pod install` only (enough to run the example)                                                  |
+| `make clean`    | Deletes `FSPlayerExample/Pods`, `Podfile.lock`, the generated `.xcodeproj` / `.xcworkspace`, and `.build/` |
+
 
 `make generate` is what you run after a fresh clone. Use `make project` when you only need the example and do not want to re-archive the xcframework.
 
@@ -197,6 +207,8 @@ Run tests
 Re-run `make project` after Podfile or `project.yml` changes. Re-run `make generate` when you need a fresh `FSPlayer.xcframework`.
 
 ---
+
+
 
 ## CocoaPods
 
@@ -223,10 +235,12 @@ The wrapper downloads Lottie 4.4.3’s official `Lottie-Xcode-14.1.xcframework.z
 
 After `pod install`, on disk:
 
-* `FSPlayerExample/Pods/Kingfisher` — source
-* `FSPlayerExample/Pods/LottieXCFramework` — `Lottie.xcframework`
+- `FSPlayerExample/Pods/Kingfisher` — source
+- `FSPlayerExample/Pods/LottieXCFramework` — `Lottie.xcframework`
 
 ---
+
+
 
 ## License
 
@@ -236,8 +250,12 @@ See the [LICENSE](LICENSE) file for more information.
 
 ---
 
+
+
 ## Author
 
 **Fabiano Pereira**
 
-GitHub: https://github.com/FabianoSouzaPereira
+GitHub: [https://github.com/FabianoSouzaPereira](https://github.com/FabianoSouzaPereira)
+
+Youtube channel: [https://www.youtube.com/@exploringthemobileworld7931](https://www.youtube.com/@exploringthemobileworld7931) 
