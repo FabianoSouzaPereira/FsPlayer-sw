@@ -69,7 +69,40 @@ The host app should include `UIBackgroundModes` → `audio` so Now Playing survi
 
 ---
 
+## Status and next steps
 
+FSPlayer **0.1.0** is a playback kernel, not a finished streaming player. You can embed `Player` + `PlayerView`, play a URL or a queue, use lock-screen controls, and resolve local Photos/Music items. Treat everything below as still missing if you are shipping a product on top of this pod.
+
+### Already in the kernel
+
+- Session API: load, play, pause, seek, stop, mute, volume, queue (`loadQueue`, `playNext`, `playPrevious`)
+- SwiftUI chrome: video layer, timeline, poster (Kingfisher), buffering (Lottie), in-player queue panel
+- Now Playing / Control Center remote commands
+- `DeviceMediaLibrary` for device videos and songs → `PlayerItem`
+- CocoaPods Binary (xcframework) and Debug (source) subspecs
+
+### Next steps in this repository (`Sources/FSPlayer`)
+
+1. **Picture in Picture** — `AVPictureInPictureController` on the existing `PlayerVideoOutput` / `AVPlayerLayer` surface
+2. **Subtitles / captions** — sidecar SRT/VTT and `AVMediaSelection` audio/caption tracks on `PlayerItem`
+3. **Playback rate** — 0.5× / 1.5× / 2× on the engine, reflected in Now Playing `playbackRate`
+4. **Mute and volume in the chrome** — `isMuted` / `volume` exist on `Player` but are not on `PlayerControlsView`
+5. **Now Playing artwork** — load `PlayerItem.artworkURL` into `MPMediaItemArtwork`
+6. **AirPlay picker** — `allowsExternalPlayback` is in `PlayerConfiguration`; there is no route-picker UI
+7. **Resume position** — persist `currentTime` per item so a later `load` can seek
+8. **Offline / download** — HLS `AVAssetDownloadTask` producing a local URL for `PlayerItem`
+9. **Controls auto-hide** — replace `asyncAfter` with a cancellable hide so pause/tap cannot fire a stale hide
+10. **Publish the pod** — CocoaPods trunk, or a tagged git install that does not require copying `Vendor/LottieXCFramework.podspec`
+
+### What belongs in the consuming app (not this repo)
+
+- Screens that list `DeviceMediaLibrary` results, catalog, search UI, login, VIPER modules
+- Analytics, recommendations, continue-watching via backend, paywall, Chromecast product UI
+- `NSPhotoLibraryUsageDescription`, `NSAppleMusicUsageDescription`, and `UIBackgroundModes` → `audio` in **your** Info.plist
+
+The example app stays a dumb host. Do not add those product features to `FSPlayerExample`.
+
+---
 
 ## Architecture
 
