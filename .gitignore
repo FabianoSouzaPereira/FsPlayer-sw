@@ -1,13 +1,96 @@
+# FSPlayer
 .build/
 Vendor/Lottie.xcframework
 Vendor/*.zip
 Vendor/__MACOSX
 
-# CocoaPods downloads these on `pod install` / `make generate`
-FsPlayerExample/Pods/
+# CocoaPods — `pod install` / `make generate` (do not commit Pods)
+Pods/
 
-# Xcode / tests
-xcuserdata/
-DerivedData/
+# Xcode / tests (custom derived data and XCTest result bundles)
+build_data/
 TestResults/
 *.xcuserstate
+
+# Created by https://www.toptal.com/developers/gitignore/api/xcode,visualstudiocode,swift,objective-c,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,visualstudiocode,swift,objective-c,git
+
+### Git ###
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### Xcode / Swift / Objective-C ###
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+# .swiftpm
+
+# Carthage
+# Carthage/Checkouts
+Carthage/Build/
+
+# Accio
+Dependencies/
+.accio/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+iOSInjectionProject/
+
+### VisualStudioCode / Cursor ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+.history
+.ionide
+*.vsix
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+.DS_Store
