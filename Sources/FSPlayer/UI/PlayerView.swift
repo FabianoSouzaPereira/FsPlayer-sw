@@ -10,6 +10,7 @@ import SwiftUI
 public struct PlayerView: View {
     @ObservedObject var player: Player
     @State private var showsControls: Bool
+    @State private var showsQueue = false
 
     private let alwaysShowsControls: Bool
 
@@ -45,16 +46,27 @@ public struct PlayerView: View {
                     .padding()
             }
 
-            if showsControls {
-                VStack {
-                    Spacer()
-                    PlayerControlsView(player: player)
+            VStack {
+                Spacer()
+                if showsQueue {
+                    PlaybackQueueView(player: player) {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            showsQueue = false
+                        }
+                    }
+                }
+                if showsControls {
+                    PlayerControlsView(
+                        player: player,
+                        onQueueTap: toggleQueue,
+                        onNowPlayingTap: activateNowPlaying
+                    )
                 }
             }
         }
         .background(Color.black)
         .onChange(of: player.state) { newState in
-            if alwaysShowsControls, newState.isPlaying {
+            if alwaysShowsControls, newState.isPlaying, !showsQueue {
                 scheduleControlsHide()
             }
         }
@@ -72,8 +84,30 @@ public struct PlayerView: View {
         }
     }
 
+    private func toggleQueue() {
+        withAnimation(.easeInOut(duration: 0.2)) {
+            showsQueue.toggle()
+            if showsQueue {
+                showsControls = true
+            }
+        }
+    }
+
+    private func activateNowPlaying() {
+        player.activateNowPlaying()
+        withAnimation(.easeInOut(duration: 0.2)) {
+            showsControls = true
+        }
+    }
+
     private func toggleControls() {
         guard alwaysShowsControls else { return }
+        if showsQueue {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                showsQueue = false
+            }
+            return
+        }
         withAnimation(.easeInOut(duration: 0.2)) {
             showsControls.toggle()
         }
@@ -84,7 +118,7 @@ public struct PlayerView: View {
 
     private func scheduleControlsHide() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            guard player.state.isPlaying, showsControls else { return }
+            guard player.state.isPlaying, showsControls, !showsQueue else { return }
             withAnimation(.easeInOut(duration: 0.2)) {
                 showsControls = false
             }

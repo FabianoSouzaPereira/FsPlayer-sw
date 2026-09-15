@@ -24,6 +24,11 @@ targets:
       - path: FSPlayerExample
     info: 
       path: FSPlayerExample/Info.plist
+      properties:
+        UIBackgroundModes:
+          - audio
+        NSPhotoLibraryUsageDescription: FSPlayer lists videos in the photo library so they can be played locally.
+        NSAppleMusicUsageDescription: FSPlayer lists songs in the media library so they can be played locally.
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.fabianospdev.FSPlayerExample

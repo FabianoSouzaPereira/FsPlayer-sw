@@ -56,7 +56,16 @@ if let item = videos.first {
 }
 ```
 
-The consuming app must declare `NSPhotoLibraryUsageDescription` and `NSAppleMusicUsageDescription`. DRM Apple Music tracks have no local URL (`DeviceMediaError.notPlayable`).
+The title on the player is a button that opens the in-player **Queue**. **Now Playing** publishes lock-screen / Control Center metadata and remote commands (play, pause, next, previous, scrub).
+
+```swift
+player.loadQueue([item1, item2])
+player.play()
+player.playNext()
+player.activateNowPlaying()
+```
+
+The host app should include `UIBackgroundModes` → `audio` so Now Playing survives the lock screen.
 
 ---
 
@@ -66,7 +75,9 @@ The consuming app must declare `NSPhotoLibraryUsageDescription` and `NSAppleMusi
 
 Mute, volume, and the audio session go through the engine protocol. Tests inject `FakePlayerEngine` (`@testable`) so load / play / pause / seek / mute do not need a real `AVPlayer`.
 
-`DeviceMediaLibrary` sits next to `Player` under `Sources/FSPlayer/DeviceMedia`. It lists device videos (Photos) and songs (MediaPlayer) and turns a `DeviceMediaItem` into a `PlayerItem`. It does not play, navigate, or own UI. The example app stays a dumb host; a product screen that browses the library belongs in the consuming app.
+`DeviceMediaLibrary` sits next to `Player` under `Sources/FSPlayer/DeviceMedia`. It lists device videos (Photos) and songs (MediaPlayer) and turns a `DeviceMediaItem` into a `PlayerItem`. It does not play, navigate, or own UI.
+
+`PlaybackQueue` (`Sources/FSPlayer/Queue`) is the play-next / play-previous list the `Player` owns. `NowPlayingSession` (`Sources/FSPlayer/NowPlaying`) mirrors the session to `MPNowPlayingInfoCenter` and `MPRemoteCommandCenter`. The example stays a dumb host; product chrome around the queue belongs in the consuming app.
 
 Login, session, other services, and VIPER modules belong in the **consuming app**, not here.
 
@@ -78,9 +89,11 @@ Login, session, other services, and VIPER modules belong in the **consuming app*
 FSPlayer/
 ├── Sources/FSPlayer/
 │   ├── Player.swift           # Public session
+│   ├── Queue/                 # PlaybackQueue
+│   ├── NowPlaying/            # Lock screen / remote commands
 │   ├── Engine/                # PlayerEngine + AVFoundation implementation
 │   ├── DeviceMedia/           # Photos videos + Music library → PlayerItem
-│   ├── UI/                    # PlayerView, controls, poster, buffering
+│   ├── UI/                    # PlayerView, controls, poster, buffering, queue panel
 │   ├── Models/
 │   ├── Core/
 │   └── Resources/             # buffering.json, etc.
