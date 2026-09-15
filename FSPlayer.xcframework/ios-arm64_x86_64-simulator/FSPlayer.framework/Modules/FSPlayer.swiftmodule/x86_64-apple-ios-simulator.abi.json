@@ -1,0 +1,3309 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "Lottie",
+        "printedName": "Lottie",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FSPlayer",
+        "printedName": "FSPlayer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC7versionSSvpZ",
+            "mangledName": "$s8FSPlayerAAC7versionSSvpZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC7versionSSvgZ",
+                "mangledName": "$s8FSPlayerAAC7versionSSvgZ",
+                "moduleName": "FSPlayer",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackState",
+                "printedName": "FSPlayer.PlaybackState",
+                "usr": "s:8FSPlayer13PlaybackStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC5stateAA13PlaybackStateOvp",
+            "mangledName": "$s8FSPlayerAAC5stateAA13PlaybackStateOvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "ProjectedValueProperty",
+              "SetterAccess",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC5stateAA13PlaybackStateOvg",
+                "mangledName": "$s8FSPlayerAAC5stateAA13PlaybackStateOvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$state",
+            "printedName": "$state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<FSPlayer.PlaybackState>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC6$state7Combine9PublishedV9PublisherVyAA13PlaybackStateO_Gvp",
+            "mangledName": "$s8FSPlayerAAC6$state7Combine9PublishedV9PublisherVyAA13PlaybackStateO_Gvp",
+            "moduleName": "FSPlayer",
+            "implicit": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<FSPlayer.PlaybackState>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC6$state7Combine9PublishedV9PublisherVyAA13PlaybackStateO_Gvg",
+                "mangledName": "$s8FSPlayerAAC6$state7Combine9PublishedV9PublisherVyAA13PlaybackStateO_Gvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentTime",
+            "printedName": "currentTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC11currentTimeSdvp",
+            "mangledName": "$s8FSPlayerAAC11currentTimeSdvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "ProjectedValueProperty",
+              "SetterAccess",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC11currentTimeSdvg",
+                "mangledName": "$s8FSPlayerAAC11currentTimeSdvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$currentTime",
+            "printedName": "$currentTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Double>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC12$currentTime7Combine9PublishedV9PublisherVySd_Gvp",
+            "mangledName": "$s8FSPlayerAAC12$currentTime7Combine9PublishedV9PublisherVySd_Gvp",
+            "moduleName": "FSPlayer",
+            "implicit": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Double>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC12$currentTime7Combine9PublishedV9PublisherVySd_Gvg",
+                "mangledName": "$s8FSPlayerAAC12$currentTime7Combine9PublishedV9PublisherVySd_Gvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "duration",
+            "printedName": "duration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC8durationSdvp",
+            "mangledName": "$s8FSPlayerAAC8durationSdvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "ProjectedValueProperty",
+              "SetterAccess",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC8durationSdvg",
+                "mangledName": "$s8FSPlayerAAC8durationSdvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$duration",
+            "printedName": "$duration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Double>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC9$duration7Combine9PublishedV9PublisherVySd_Gvp",
+            "mangledName": "$s8FSPlayerAAC9$duration7Combine9PublishedV9PublisherVySd_Gvp",
+            "moduleName": "FSPlayer",
+            "implicit": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Double>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC9$duration7Combine9PublishedV9PublisherVySd_Gvg",
+                "mangledName": "$s8FSPlayerAAC9$duration7Combine9PublishedV9PublisherVySd_Gvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentItem",
+            "printedName": "currentItem",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FSPlayer.PlayerItem?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlayerItem",
+                    "printedName": "FSPlayer.PlayerItem",
+                    "usr": "s:8FSPlayer10PlayerItemV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC11currentItemAA06PlayerC0VSgvp",
+            "mangledName": "$s8FSPlayerAAC11currentItemAA06PlayerC0VSgvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "ProjectedValueProperty",
+              "SetterAccess",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "FSPlayer.PlayerItem?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlayerItem",
+                        "printedName": "FSPlayer.PlayerItem",
+                        "usr": "s:8FSPlayer10PlayerItemV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC11currentItemAA06PlayerC0VSgvg",
+                "mangledName": "$s8FSPlayerAAC11currentItemAA06PlayerC0VSgvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$currentItem",
+            "printedName": "$currentItem",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Optional<FSPlayer.PlayerItem>>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC12$currentItem7Combine9PublishedV9PublisherVyAA06PlayerC0VSg_Gvp",
+            "mangledName": "$s8FSPlayerAAC12$currentItem7Combine9PublishedV9PublisherVyAA06PlayerC0VSg_Gvp",
+            "moduleName": "FSPlayer",
+            "implicit": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Optional<FSPlayer.PlayerItem>>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC12$currentItem7Combine9PublishedV9PublisherVyAA06PlayerC0VSg_Gvg",
+                "mangledName": "$s8FSPlayerAAC12$currentItem7Combine9PublishedV9PublisherVyAA06PlayerC0VSg_Gvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isMuted",
+            "printedName": "isMuted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC7isMutedSbvp",
+            "mangledName": "$s8FSPlayerAAC7isMutedSbvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC7isMutedSbvg",
+                "mangledName": "$s8FSPlayerAAC7isMutedSbvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC7isMutedSbvs",
+                "mangledName": "$s8FSPlayerAAC7isMutedSbvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC7isMutedSbvM",
+                "mangledName": "$s8FSPlayerAAC7isMutedSbvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "volume",
+            "printedName": "volume",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC6volumeSfvp",
+            "mangledName": "$s8FSPlayerAAC6volumeSfvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC6volumeSfvg",
+                "mangledName": "$s8FSPlayerAAC6volumeSfvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC6volumeSfvs",
+                "mangledName": "$s8FSPlayerAAC6volumeSfvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC6volumeSfvM",
+                "mangledName": "$s8FSPlayerAAC6volumeSfvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "videoGravity",
+            "printedName": "videoGravity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoGravity",
+                "printedName": "FSPlayer.VideoGravity",
+                "usr": "s:8FSPlayer12VideoGravityO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayerAAC12videoGravityAA05VideoC0Ovp",
+            "mangledName": "$s8FSPlayerAAC12videoGravityAA05VideoC0Ovp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC12videoGravityAA05VideoC0Ovg",
+                "mangledName": "$s8FSPlayerAAC12videoGravityAA05VideoC0Ovg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC12videoGravityAA05VideoC0Ovs",
+                "mangledName": "$s8FSPlayerAAC12videoGravityAA05VideoC0Ovs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayerAAC12videoGravityAA05VideoC0OvM",
+                "mangledName": "$s8FSPlayerAAC12videoGravityAA05VideoC0OvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(item:configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FSPlayer",
+                "printedName": "FSPlayer.FSPlayer",
+                "usr": "s:8FSPlayerAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FSPlayer.PlayerItem?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlayerItem",
+                    "printedName": "FSPlayer.PlayerItem",
+                    "usr": "s:8FSPlayer10PlayerItemV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerConfiguration",
+                "printedName": "FSPlayer.PlayerConfiguration",
+                "hasDefaultArg": true,
+                "usr": "s:8FSPlayer19PlayerConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8FSPlayerAAC4item13configurationAbA10PlayerItemVSg_AA0D13ConfigurationVtcfc",
+            "mangledName": "$s8FSPlayerAAC4item13configurationAbA10PlayerItemVSg_AA0D13ConfigurationVtcfc",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerItem",
+                "printedName": "FSPlayer.PlayerItem",
+                "usr": "s:8FSPlayer10PlayerItemV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayerAAC4loadyyAA10PlayerItemVF",
+            "mangledName": "$s8FSPlayerAAC4loadyyAA10PlayerItemVF",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "play",
+            "printedName": "play()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayerAAC4playyyF",
+            "mangledName": "$s8FSPlayerAAC4playyyF",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayerAAC5pauseyyF",
+            "mangledName": "$s8FSPlayerAAC5pauseyyF",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "togglePlayPause",
+            "printedName": "togglePlayPause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayerAAC15togglePlayPauseyyF",
+            "mangledName": "$s8FSPlayerAAC15togglePlayPauseyyF",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "seek",
+            "printedName": "seek(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayerAAC4seek2toySd_tF",
+            "mangledName": "$s8FSPlayerAAC4seek2toySd_tF",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayerAAC4stopyyF",
+            "mangledName": "$s8FSPlayerAAC4stopyyF",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8FSPlayerAAC",
+        "mangledName": "$s8FSPlayerAAC",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaybackState",
+        "printedName": "PlaybackState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "idle",
+            "printedName": "idle",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO4idleyA2CmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO4idleyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "loading",
+            "printedName": "loading",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO7loadingyA2CmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO7loadingyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "playing",
+            "printedName": "playing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO7playingyA2CmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO7playingyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "paused",
+            "printedName": "paused",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO6pausedyA2CmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO6pausedyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "buffering",
+            "printedName": "buffering",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO9bufferingyA2CmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO9bufferingyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "ended",
+            "printedName": "ended",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackState",
+                    "printedName": "FSPlayer.PlaybackState",
+                    "usr": "s:8FSPlayer13PlaybackStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO5endedyA2CmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO5endedyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlaybackState.Type) -> (FSPlayer.PlayerError) -> FSPlayer.PlaybackState",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(FSPlayer.PlayerError) -> FSPlayer.PlaybackState",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlayerError",
+                        "printedName": "FSPlayer.PlayerError",
+                        "usr": "s:8FSPlayer11PlayerErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlaybackState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackState",
+                        "printedName": "FSPlayer.PlaybackState",
+                        "usr": "s:8FSPlayer13PlaybackStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer13PlaybackStateO6failedyAcA11PlayerErrorOcACmF",
+            "mangledName": "$s8FSPlayer13PlaybackStateO6failedyAcA11PlayerErrorOcACmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "isPlaying",
+            "printedName": "isPlaying",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer13PlaybackStateO9isPlayingSbvp",
+            "mangledName": "$s8FSPlayer13PlaybackStateO9isPlayingSbvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer13PlaybackStateO9isPlayingSbvg",
+                "mangledName": "$s8FSPlayer13PlaybackStateO9isPlayingSbvg",
+                "moduleName": "FSPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackState",
+                "printedName": "FSPlayer.PlaybackState",
+                "usr": "s:8FSPlayer13PlaybackStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackState",
+                "printedName": "FSPlayer.PlaybackState",
+                "usr": "s:8FSPlayer13PlaybackStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayer13PlaybackStateO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8FSPlayer13PlaybackStateO2eeoiySbAC_ACtFZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8FSPlayer13PlaybackStateO",
+        "mangledName": "$s8FSPlayer13PlaybackStateO",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VideoGravity",
+        "printedName": "VideoGravity",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "resize",
+            "printedName": "resize",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.VideoGravity.Type) -> FSPlayer.VideoGravity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.VideoGravity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoGravity",
+                        "printedName": "FSPlayer.VideoGravity",
+                        "usr": "s:8FSPlayer12VideoGravityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer12VideoGravityO6resizeyA2CmF",
+            "mangledName": "$s8FSPlayer12VideoGravityO6resizeyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "resizeAspect",
+            "printedName": "resizeAspect",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.VideoGravity.Type) -> FSPlayer.VideoGravity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.VideoGravity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoGravity",
+                        "printedName": "FSPlayer.VideoGravity",
+                        "usr": "s:8FSPlayer12VideoGravityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer12VideoGravityO12resizeAspectyA2CmF",
+            "mangledName": "$s8FSPlayer12VideoGravityO12resizeAspectyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "resizeAspectFill",
+            "printedName": "resizeAspectFill",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.VideoGravity.Type) -> FSPlayer.VideoGravity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.VideoGravity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoGravity",
+                        "printedName": "FSPlayer.VideoGravity",
+                        "usr": "s:8FSPlayer12VideoGravityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer12VideoGravityO16resizeAspectFillyA2CmF",
+            "mangledName": "$s8FSPlayer12VideoGravityO16resizeAspectFillyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer12VideoGravityO9hashValueSivp",
+            "mangledName": "$s8FSPlayer12VideoGravityO9hashValueSivp",
+            "moduleName": "FSPlayer",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer12VideoGravityO9hashValueSivg",
+                "mangledName": "$s8FSPlayer12VideoGravityO9hashValueSivg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayer12VideoGravityO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s8FSPlayer12VideoGravityO4hash4intoys6HasherVz_tF",
+            "moduleName": "FSPlayer",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoGravity",
+                "printedName": "FSPlayer.VideoGravity",
+                "usr": "s:8FSPlayer12VideoGravityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoGravity",
+                "printedName": "FSPlayer.VideoGravity",
+                "usr": "s:8FSPlayer12VideoGravityO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayer12VideoGravityO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8FSPlayer12VideoGravityO2eeoiySbAC_ACtFZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8FSPlayer12VideoGravityO",
+        "mangledName": "$s8FSPlayer12VideoGravityO",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlayerConfiguration",
+        "printedName": "PlayerConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isMuted",
+            "printedName": "isMuted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV7isMutedSbvp",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV7isMutedSbvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV7isMutedSbvg",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV7isMutedSbvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV7isMutedSbvs",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV7isMutedSbvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV7isMutedSbvM",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV7isMutedSbvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "volume",
+            "printedName": "volume",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV6volumeSfvp",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV6volumeSfvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV6volumeSfvg",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV6volumeSfvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV6volumeSfvs",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV6volumeSfvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV6volumeSfvM",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV6volumeSfvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "videoGravity",
+            "printedName": "videoGravity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoGravity",
+                "printedName": "FSPlayer.VideoGravity",
+                "usr": "s:8FSPlayer12VideoGravityO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0Ovp",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0Ovp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0Ovg",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0Ovg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoGravity",
+                    "printedName": "FSPlayer.VideoGravity",
+                    "usr": "s:8FSPlayer12VideoGravityO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0Ovs",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0Ovs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0OvM",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV12videoGravityAA05VideoE0OvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "automaticallyWaitsToMinimizeStalling",
+            "printedName": "automaticallyWaitsToMinimizeStalling",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvp",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvg",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvs",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvM",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV36automaticallyWaitsToMinimizeStallingSbvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowsExternalPlayback",
+            "printedName": "allowsExternalPlayback",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvp",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvg",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvs",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvM",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV22allowsExternalPlaybackSbvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeUpdateInterval",
+            "printedName": "timeUpdateInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvp",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvg",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvs",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvs",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvM",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV18timeUpdateIntervalSdvM",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerConfiguration",
+                "printedName": "FSPlayer.PlayerConfiguration",
+                "usr": "s:8FSPlayer19PlayerConfigurationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer19PlayerConfigurationV7defaultACvpZ",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV7defaultACvpZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlayerConfiguration",
+                    "printedName": "FSPlayer.PlayerConfiguration",
+                    "usr": "s:8FSPlayer19PlayerConfigurationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer19PlayerConfigurationV7defaultACvgZ",
+                "mangledName": "$s8FSPlayer19PlayerConfigurationV7defaultACvgZ",
+                "moduleName": "FSPlayer",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isMuted:volume:videoGravity:automaticallyWaitsToMinimizeStalling:allowsExternalPlayback:timeUpdateInterval:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerConfiguration",
+                "printedName": "FSPlayer.PlayerConfiguration",
+                "usr": "s:8FSPlayer19PlayerConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoGravity",
+                "printedName": "FSPlayer.VideoGravity",
+                "hasDefaultArg": true,
+                "usr": "s:8FSPlayer12VideoGravityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8FSPlayer19PlayerConfigurationV7isMuted6volume12videoGravity36automaticallyWaitsToMinimizeStalling22allowsExternalPlayback18timeUpdateIntervalACSb_SfAA05VideoH0OS2bSdtcfc",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV7isMuted6volume12videoGravity36automaticallyWaitsToMinimizeStalling22allowsExternalPlayback18timeUpdateIntervalACSb_SfAA05VideoH0OS2bSdtcfc",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerConfiguration",
+                "printedName": "FSPlayer.PlayerConfiguration",
+                "usr": "s:8FSPlayer19PlayerConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerConfiguration",
+                "printedName": "FSPlayer.PlayerConfiguration",
+                "usr": "s:8FSPlayer19PlayerConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayer19PlayerConfigurationV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8FSPlayer19PlayerConfigurationV2eeoiySbAC_ACtFZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8FSPlayer19PlayerConfigurationV",
+        "mangledName": "$s8FSPlayer19PlayerConfigurationV",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlayerControlsView",
+        "printedName": "PlayerControlsView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(player:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerControlsView",
+                "printedName": "FSPlayer.PlayerControlsView",
+                "usr": "s:8FSPlayer18PlayerControlsViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FSPlayer",
+                "printedName": "FSPlayer.FSPlayer",
+                "usr": "s:8FSPlayerAAC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8FSPlayer18PlayerControlsViewV6playerAc2AC_tcfc",
+            "mangledName": "$s8FSPlayer18PlayerControlsViewV6playerAc2AC_tcfc",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer18PlayerControlsViewV4bodyQrvp",
+            "mangledName": "$s8FSPlayer18PlayerControlsViewV4bodyQrvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer18PlayerControlsViewV4bodyQrvg",
+                "mangledName": "$s8FSPlayer18PlayerControlsViewV4bodyQrvg",
+                "moduleName": "FSPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8FSPlayer18PlayerControlsViewV",
+        "mangledName": "$s8FSPlayer18PlayerControlsViewV",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlayerError",
+        "printedName": "PlayerError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalidURL",
+            "printedName": "invalidURL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlayerError.Type) -> FSPlayer.PlayerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlayerError",
+                    "printedName": "FSPlayer.PlayerError",
+                    "usr": "s:8FSPlayer11PlayerErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlayerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlayerError",
+                        "printedName": "FSPlayer.PlayerError",
+                        "usr": "s:8FSPlayer11PlayerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer11PlayerErrorO10invalidURLyA2CmF",
+            "mangledName": "$s8FSPlayer11PlayerErrorO10invalidURLyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "itemFailed",
+            "printedName": "itemFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlayerError.Type) -> (Swift.String) -> FSPlayer.PlayerError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> FSPlayer.PlayerError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlayerError",
+                        "printedName": "FSPlayer.PlayerError",
+                        "usr": "s:8FSPlayer11PlayerErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlayerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlayerError",
+                        "printedName": "FSPlayer.PlayerError",
+                        "usr": "s:8FSPlayer11PlayerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer11PlayerErrorO10itemFailedyACSScACmF",
+            "mangledName": "$s8FSPlayer11PlayerErrorO10itemFailedyACSScACmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FSPlayer.PlayerError.Type) -> FSPlayer.PlayerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlayerError",
+                    "printedName": "FSPlayer.PlayerError",
+                    "usr": "s:8FSPlayer11PlayerErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FSPlayer.PlayerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlayerError",
+                        "printedName": "FSPlayer.PlayerError",
+                        "usr": "s:8FSPlayer11PlayerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8FSPlayer11PlayerErrorO7unknownyA2CmF",
+            "mangledName": "$s8FSPlayer11PlayerErrorO7unknownyA2CmF",
+            "moduleName": "FSPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer11PlayerErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s8FSPlayer11PlayerErrorO16errorDescriptionSSSgvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer11PlayerErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s8FSPlayer11PlayerErrorO16errorDescriptionSSSgvg",
+                "moduleName": "FSPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerError",
+                "printedName": "FSPlayer.PlayerError",
+                "usr": "s:8FSPlayer11PlayerErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerError",
+                "printedName": "FSPlayer.PlayerError",
+                "usr": "s:8FSPlayer11PlayerErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayer11PlayerErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8FSPlayer11PlayerErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8FSPlayer11PlayerErrorO",
+        "mangledName": "$s8FSPlayer11PlayerErrorO",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlayerItem",
+        "printedName": "PlayerItem",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "url",
+            "printedName": "url",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer10PlayerItemV3url10Foundation3URLVvp",
+            "mangledName": "$s8FSPlayer10PlayerItemV3url10Foundation3URLVvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer10PlayerItemV3url10Foundation3URLVvg",
+                "mangledName": "$s8FSPlayer10PlayerItemV3url10Foundation3URLVvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer10PlayerItemV5titleSSSgvp",
+            "mangledName": "$s8FSPlayer10PlayerItemV5titleSSSgvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer10PlayerItemV5titleSSSgvg",
+                "mangledName": "$s8FSPlayer10PlayerItemV5titleSSSgvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "artworkURL",
+            "printedName": "artworkURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer10PlayerItemV10artworkURL10Foundation0E0VSgvp",
+            "mangledName": "$s8FSPlayer10PlayerItemV10artworkURL10Foundation0E0VSgvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer10PlayerItemV10artworkURL10Foundation0E0VSgvg",
+                "mangledName": "$s8FSPlayer10PlayerItemV10artworkURL10Foundation0E0VSgvg",
+                "moduleName": "FSPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(url:title:artworkURL:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerItem",
+                "printedName": "FSPlayer.PlayerItem",
+                "usr": "s:8FSPlayer10PlayerItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8FSPlayer10PlayerItemV3url5title10artworkURLAC10Foundation0G0V_SSSgAISgtcfc",
+            "mangledName": "$s8FSPlayer10PlayerItemV3url5title10artworkURLAC10Foundation0G0V_SSSgAISgtcfc",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerItem",
+                "printedName": "FSPlayer.PlayerItem",
+                "usr": "s:8FSPlayer10PlayerItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerItem",
+                "printedName": "FSPlayer.PlayerItem",
+                "usr": "s:8FSPlayer10PlayerItemV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8FSPlayer10PlayerItemV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8FSPlayer10PlayerItemV2eeoiySbAC_ACtFZ",
+            "moduleName": "FSPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8FSPlayer10PlayerItemV",
+        "mangledName": "$s8FSPlayer10PlayerItemV",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlayerView",
+        "printedName": "PlayerView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(player:showsControls:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerView",
+                "printedName": "FSPlayer.PlayerView",
+                "usr": "s:8FSPlayer10PlayerViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FSPlayer",
+                "printedName": "FSPlayer.FSPlayer",
+                "usr": "s:8FSPlayerAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8FSPlayer10PlayerViewV6player13showsControlsAc2AC_Sbtcfc",
+            "mangledName": "$s8FSPlayer10PlayerViewV6player13showsControlsAc2AC_Sbtcfc",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8FSPlayer10PlayerViewV4bodyQrvp",
+            "mangledName": "$s8FSPlayer10PlayerViewV4bodyQrvp",
+            "moduleName": "FSPlayer",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8FSPlayer10PlayerViewV4bodyQrvg",
+                "mangledName": "$s8FSPlayer10PlayerViewV4bodyQrvg",
+                "moduleName": "FSPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8FSPlayer10PlayerViewV",
+        "mangledName": "$s8FSPlayer10PlayerViewV",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Kingfisher",
+        "printedName": "Kingfisher",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FSPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FSPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/Engine\/AVFoundationPlayerEngine.swift",
+      "kind": "Array",
+      "offset": 354,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/FSPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 212,
+      "length": 7,
+      "value": "\"0.1.0\""
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/FSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 356,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/FSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 422,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/FSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 669,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/FSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 673,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/Core\/PlayerConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 609,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/Core\/PlayerConfiguration.swift",
+      "kind": "FloatLiteral",
+      "offset": 640,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/Core\/PlayerConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 750,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/Core\/PlayerConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 795,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/Core\/PlayerConfiguration.swift",
+      "kind": "FloatLiteral",
+      "offset": 844,
+      "length": 4,
+      "value": "0.25"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/UI\/PlayerControlsView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 223,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/UI\/PlayerControlsView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 278,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/cvclose\/PROJECTS\/IOS\/FSPlayer\/Sources\/FSPlayer\/UI\/PlayerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 313,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

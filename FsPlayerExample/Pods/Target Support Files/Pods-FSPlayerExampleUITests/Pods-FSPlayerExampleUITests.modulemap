@@ -1,6 +1,0 @@
-framework module Pods_FSPlayerExampleUITests {
-  umbrella header "Pods-FSPlayerExampleUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

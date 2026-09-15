@@ -7,6 +7,7 @@ use_frameworks!
 target 'FSPlayerExample' do
   # Compile the local Sources/FSPlayer implementation while developing the framework.
   pod 'FSPlayer/Debug', :path => '../'
+  pod 'LottieXCFramework', :podspec => '../Vendor/LottieXCFramework.podspec'
 end
 
 target 'FSPlayerExampleTests' do

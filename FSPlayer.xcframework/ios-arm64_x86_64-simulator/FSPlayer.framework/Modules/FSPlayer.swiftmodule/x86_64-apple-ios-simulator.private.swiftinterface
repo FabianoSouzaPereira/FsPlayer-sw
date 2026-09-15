@@ -1,0 +1,125 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios16.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FSPlayer
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Combine
+@_exported import FSPlayer
+import Foundation
+import Kingfisher
+import Lottie
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+final public class FSPlayer : Combine.ObservableObject {
+  public static let version: Swift.String
+  @Combine.Published @_projectedValueProperty($state) final public var state: FSPlayer.PlaybackState {
+    get
+  }
+  final public var $state: Combine.Published<FSPlayer.PlaybackState>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($currentTime) final public var currentTime: Foundation.TimeInterval {
+    get
+  }
+  final public var $currentTime: Combine.Published<Foundation.TimeInterval>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($duration) final public var duration: Foundation.TimeInterval {
+    get
+  }
+  final public var $duration: Combine.Published<Foundation.TimeInterval>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($currentItem) final public var currentItem: FSPlayer.PlayerItem? {
+    get
+  }
+  final public var $currentItem: Combine.Published<FSPlayer.PlayerItem?>.Publisher {
+    get
+  }
+  final public var isMuted: Swift.Bool {
+    get
+    set
+  }
+  final public var volume: Swift.Float {
+    get
+    set
+  }
+  final public var videoGravity: FSPlayer.VideoGravity
+  public init(item: FSPlayer.PlayerItem? = nil, configuration: FSPlayer.PlayerConfiguration = .default)
+  final public func load(_ item: FSPlayer.PlayerItem)
+  final public func play()
+  final public func pause()
+  final public func togglePlayPause()
+  final public func seek(to time: Foundation.TimeInterval)
+  final public func stop()
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public enum PlaybackState : Swift.Equatable {
+  case idle
+  case loading
+  case playing
+  case paused
+  case buffering
+  case ended
+  case failed(FSPlayer.PlayerError)
+  public var isPlaying: Swift.Bool {
+    get
+  }
+  public static func == (a: FSPlayer.PlaybackState, b: FSPlayer.PlaybackState) -> Swift.Bool
+}
+public enum VideoGravity : Swift.Equatable {
+  case resize
+  case resizeAspect
+  case resizeAspectFill
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: FSPlayer.VideoGravity, b: FSPlayer.VideoGravity) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct PlayerConfiguration : Swift.Equatable {
+  public var isMuted: Swift.Bool
+  public var volume: Swift.Float
+  public var videoGravity: FSPlayer.VideoGravity
+  public var automaticallyWaitsToMinimizeStalling: Swift.Bool
+  public var allowsExternalPlayback: Swift.Bool
+  public var timeUpdateInterval: Foundation.TimeInterval
+  public static let `default`: FSPlayer.PlayerConfiguration
+  public init(isMuted: Swift.Bool = false, volume: Swift.Float = 1.0, videoGravity: FSPlayer.VideoGravity = .resizeAspect, automaticallyWaitsToMinimizeStalling: Swift.Bool = true, allowsExternalPlayback: Swift.Bool = true, timeUpdateInterval: Foundation.TimeInterval = 0.25)
+  public static func == (a: FSPlayer.PlayerConfiguration, b: FSPlayer.PlayerConfiguration) -> Swift.Bool
+}
+@_Concurrency.MainActor(unsafe) public struct PlayerControlsView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(player: FSPlayer.FSPlayer)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s8FSPlayer18PlayerControlsViewV4bodyQrvp", 0) __
+}
+public enum PlayerError : Swift.Error, Swift.Equatable, Foundation.LocalizedError {
+  case invalidURL
+  case itemFailed(Swift.String)
+  case unknown
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: FSPlayer.PlayerError, b: FSPlayer.PlayerError) -> Swift.Bool
+}
+public struct PlayerItem : Swift.Equatable {
+  public let url: Foundation.URL
+  public let title: Swift.String?
+  public let artworkURL: Foundation.URL?
+  public init(url: Foundation.URL, title: Swift.String? = nil, artworkURL: Foundation.URL? = nil)
+  public static func == (a: FSPlayer.PlayerItem, b: FSPlayer.PlayerItem) -> Swift.Bool
+}
+@_Concurrency.MainActor(unsafe) public struct PlayerView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(player: FSPlayer.FSPlayer, showsControls: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s8FSPlayer10PlayerViewV4bodyQrvp", 0) __
+}
+extension FSPlayer.VideoGravity : Swift.Hashable {}

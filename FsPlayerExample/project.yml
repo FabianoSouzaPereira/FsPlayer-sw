@@ -65,6 +65,6 @@ schemes:
       coverageTargets:
         - FSPlayerExample
       targets:
-        - mame: FSPlayerTests
-        - name: FSPlayerUITests
+        - name: FSPlayerExampleTests
+        - name: FSPlayerExampleUITests
           parallelizable: true

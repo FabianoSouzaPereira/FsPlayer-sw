@@ -28,7 +28,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "NO">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -39,7 +40,39 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "23716E697C06FEFD217A0B48"
+               BuildableName = "FSPlayerExampleTests.xctest"
+               BlueprintName = "FSPlayerExampleTests"
+               ReferencedContainer = "container:FSPlayerExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EA9056576DC66D9CB1BC499B"
+               BuildableName = "FSPlayerExampleUITests.xctest"
+               BlueprintName = "FSPlayerExampleUITests"
+               ReferencedContainer = "container:FSPlayerExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8FA2DE1FCCCDD7AAA3EF1FB9"
+            BuildableName = "FSPlayerExample.app"
+            BlueprintName = "FSPlayerExample"
+            ReferencedContainer = "container:FSPlayerExample.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

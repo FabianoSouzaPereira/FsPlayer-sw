@@ -24,6 +24,15 @@ final class FSPlayerTests: XCTestCase {
 
         XCTAssertEqual(item.url, url)
         XCTAssertEqual(item.title, "Demo")
+        XCTAssertNil(item.artworkURL)
+    }
+
+    func testPlayerItemStoresArtworkURL() {
+        let url = URL(string: "https://example.com/video.m3u8")!
+        let artwork = URL(string: "https://example.com/poster.jpg")!
+        let item = PlayerItem(url: url, title: "Demo", artworkURL: artwork)
+
+        XCTAssertEqual(item.artworkURL, artwork)
     }
 
     func testPlaybackStateReportsPlaying() {

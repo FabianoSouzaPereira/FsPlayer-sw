@@ -1,16 +1,29 @@
 PODS:
-  - FSPlayer/Debug (0.1.0)
+  - FSPlayer/Debug (0.1.0):
+    - Kingfisher (< 8.5, >= 8.0)
+    - LottieXCFramework (= 4.4.3)
+  - Kingfisher (8.4.0)
+  - LottieXCFramework (4.4.3)
 
 DEPENDENCIES:
   - FSPlayer/Debug (from `../`)
+  - LottieXCFramework (from `../Vendor/LottieXCFramework.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   FSPlayer:
     :path: "../"
+  LottieXCFramework:
+    :podspec: "../Vendor/LottieXCFramework.podspec"
 
 SPEC CHECKSUMS:
-  FSPlayer: d3fd8d708d82e5eeae15e5bc13d50bc10bf60cd4
+  FSPlayer: 7f63cfe10ac89021121768923aca39d8a0cb5069
+  Kingfisher: b14cc47bbfa7a3c150dd12962ee9c86338545629
+  LottieXCFramework: bec35b532a25587dc91c6a0084495609496c226c
 
-PODFILE CHECKSUM: 0a4da8bd7ef15795ed6e4ff5c26d398effb8ff84
+PODFILE CHECKSUM: 133c58ef8fc5854dd24c1ca41e44a309eb98c4f8
 
 COCOAPODS: 1.16.2

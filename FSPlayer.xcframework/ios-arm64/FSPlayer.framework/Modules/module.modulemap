@@ -1,0 +1,11 @@
+framework module FSPlayer {
+  umbrella header "FSPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module FSPlayer.Swift {
+  header "FSPlayer-Swift.h"
+  requires objc
+}

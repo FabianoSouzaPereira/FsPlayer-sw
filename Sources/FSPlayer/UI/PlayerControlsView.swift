@@ -8,11 +8,11 @@
 import SwiftUI
 
 public struct PlayerControlsView: View {
-    @ObservedObject var player: FSPlayer
+    @ObservedObject var player: Player
     @State private var isScrubbing = false
     @State private var scrubTime: TimeInterval = 0
 
-    public init(player: FSPlayer) {
+    public init(player: Player) {
         self.player = player
     }
 

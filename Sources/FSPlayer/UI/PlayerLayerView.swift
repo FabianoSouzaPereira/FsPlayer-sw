@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 struct PlayerLayerView: UIViewRepresentable {
-    let player: FSPlayer
+    let player: Player
 
     func makeUIView(context: Context) -> PlayerContainerView {
         let view = PlayerContainerView()

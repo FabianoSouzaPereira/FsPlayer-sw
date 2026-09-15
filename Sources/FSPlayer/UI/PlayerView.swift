@@ -8,12 +8,12 @@
 import SwiftUI
 
 public struct PlayerView: View {
-    @ObservedObject var player: FSPlayer
+    @ObservedObject var player: Player
     @State private var showsControls: Bool
 
     private let alwaysShowsControls: Bool
 
-    public init(player: FSPlayer, showsControls: Bool = true) {
+    public init(player: Player, showsControls: Bool = true) {
         self.player = player
         self._showsControls = State(initialValue: showsControls)
         self.alwaysShowsControls = showsControls
@@ -22,13 +22,16 @@ public struct PlayerView: View {
     public var body: some View {
         ZStack {
             PlayerLayerView(player: player)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .overlay {
+                    if showsPoster, let artworkURL = player.currentItem?.artworkURL {
+                        PosterImageView(url: artworkURL)
+                    }
+                }
                 .onTapGesture(perform: toggleControls)
 
             if player.state == .buffering || player.state == .loading {
-                ProgressView()
-                    .progressViewStyle(.circular)
-                    .tint(.white)
-                    .scaleEffect(1.2)
+                BufferingIndicatorView()
             }
 
             if case .failed(let error) = player.state {
@@ -54,6 +57,18 @@ public struct PlayerView: View {
             if alwaysShowsControls, newState.isPlaying {
                 scheduleControlsHide()
             }
+        }
+    }
+
+    private var showsPoster: Bool {
+        guard player.currentItem?.artworkURL != nil else { return false }
+        switch player.state {
+        case .idle, .loading:
+            return true
+        case .paused:
+            return player.currentTime <= 0
+        default:
+            return false
         }
     }
 

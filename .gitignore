@@ -1,0 +1,13 @@
+.build/
+Vendor/Lottie.xcframework
+Vendor/*.zip
+Vendor/__MACOSX
+
+# CocoaPods downloads these on `pod install` / `make generate`
+FsPlayerExample/Pods/
+
+# Xcode / tests
+xcuserdata/
+DerivedData/
+TestResults/
+*.xcuserstate
