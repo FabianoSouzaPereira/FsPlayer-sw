@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform         = :ios, '16.2'
   spec.source           = { :git => "https://github.com/FabianoSouzaPereira/FsPlayer-sw.git", :tag => spec.version.to_s }
   spec.swift_version    = '5.10'
-  spec.frameworks       = ['Foundation', 'UIKit', 'AVFoundation', 'SwiftUI', 'Combine']
+  spec.frameworks       = ['Foundation', 'UIKit', 'AVFoundation', 'SwiftUI', 'Combine', 'Photos', 'MediaPlayer']
   spec.dependency 'Kingfisher', '>= 8.0', '< 8.5'
   spec.dependency 'LottieXCFramework', '4.4.3'
   spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }

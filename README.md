@@ -44,6 +44,20 @@ struct ContentView: View {
 
 If another type named `Player` is in scope, qualify it as `FSPlayer.Player`.
 
+Local videos live in the Photos library; songs live in the Music / media library. That lookup is `DeviceMediaLibrary`, not `Player`. Resolve an item, then load it:
+
+```swift
+let library = DeviceMediaLibrary()
+let videos = try await library.videos(matching: "holiday")
+if let item = videos.first {
+    let playerItem = try await library.playerItem(for: item)
+    player.load(playerItem)
+    player.play()
+}
+```
+
+The consuming app must declare `NSPhotoLibraryUsageDescription` and `NSAppleMusicUsageDescription`. DRM Apple Music tracks have no local URL (`DeviceMediaError.notPlayable`).
+
 ---
 
 ## Architecture
@@ -52,7 +66,9 @@ If another type named `Player` is in scope, qualify it as `FSPlayer.Player`.
 
 Mute, volume, and the audio session go through the engine protocol. Tests inject `FakePlayerEngine` (`@testable`) so load / play / pause / seek / mute do not need a real `AVPlayer`.
 
-This repository is the playback kernel plus a harness. Login, session, other services, and VIPER modules belong in the **consuming app**, not here.
+`DeviceMediaLibrary` sits next to `Player` under `Sources/FSPlayer/DeviceMedia`. It lists device videos (Photos) and songs (MediaPlayer) and turns a `DeviceMediaItem` into a `PlayerItem`. It does not play, navigate, or own UI. The example app stays a dumb host; a product screen that browses the library belongs in the consuming app.
+
+Login, session, other services, and VIPER modules belong in the **consuming app**, not here.
 
 ---
 
@@ -63,6 +79,7 @@ FSPlayer/
 ├── Sources/FSPlayer/
 │   ├── Player.swift           # Public session
 │   ├── Engine/                # PlayerEngine + AVFoundation implementation
+│   ├── DeviceMedia/           # Photos videos + Music library → PlayerItem
 │   ├── UI/                    # PlayerView, controls, poster, buffering
 │   ├── Models/
 │   ├── Core/

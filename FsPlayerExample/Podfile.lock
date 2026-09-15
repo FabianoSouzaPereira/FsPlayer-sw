@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :podspec: "../Vendor/LottieXCFramework.podspec"
 
 SPEC CHECKSUMS:
-  FSPlayer: 7f63cfe10ac89021121768923aca39d8a0cb5069
+  FSPlayer: d0803409b9dd84f028e99c46c78989b23db47a4b
   Kingfisher: b14cc47bbfa7a3c150dd12962ee9c86338545629
   LottieXCFramework: bec35b532a25587dc91c6a0084495609496c226c
 
