@@ -19,7 +19,7 @@
 		88808A2D34E1EDAF59247EF7 /* Pods_FSPlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8038F283C671C5788DE7DD /* Pods_FSPlayerExampleTests.framework */; };
 		B7C49C49AC179B8587F17A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303E8BFA2DD98A3ABD335C24 /* Assets.xcassets */; };
 		BECDF3FDDFEC247808BB00A4 /* FsPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D47818DD6E8639793690 /* FsPlayerTests.swift */; };
-		FF5513D10F3D5A75950D030D /* FsPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC264A6788AF8FEF23CF7FC /* FsPlayerApp.swift */; };
+		FF5513D10F3D5A75950D030D /* FSPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC264A6788AF8FEF23CF7FC /* FSPlayerApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0397E3B2F1B44E167CA23AC7 /* FsPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FsPlayerUITests.swift; sourceTree = "<group>"; };
-		0AC264A6788AF8FEF23CF7FC /* FsPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FsPlayerApp.swift; sourceTree = "<group>"; };
+		0AC264A6788AF8FEF23CF7FC /* FSPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPlayerApp.swift; sourceTree = "<group>"; };
 		100C8D733DDD8B394F2E326B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		17595B6A33B8401F9492926B /* Pods_FSPlayerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSPlayerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8038F283C671C5788DE7DD /* Pods_FSPlayerExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSPlayerExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +113,7 @@
 				7E7A64C990DF237318138A00 /* Preview Content */,
 				303E8BFA2DD98A3ABD335C24 /* Assets.xcassets */,
 				A9BC74F99DB480764D9467EC /* ContentView.swift */,
-				0AC264A6788AF8FEF23CF7FC /* FsPlayerApp.swift */,
+				0AC264A6788AF8FEF23CF7FC /* FSPlayerApp.swift */,
 				D1270D4DD18B66DD8564508E /* Info.plist */,
 			);
 			path = FSPlayerExample;
@@ -402,7 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2146338A3ADB354868FAAB90 /* ContentView.swift in Sources */,
-				FF5513D10F3D5A75950D030D /* FsPlayerApp.swift in Sources */,
+				FF5513D10F3D5A75950D030D /* FSPlayerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

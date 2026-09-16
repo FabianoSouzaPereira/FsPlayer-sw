@@ -167,7 +167,7 @@ FSPlayer/
 ├── Vendor/
 │   └── LottieXCFramework.podspec
 ├── FSPlayer.xcframework/      # Prebuilt Binary distribution (`make generate`)
-├── FsPlayer.podspec
+├── FSPlayer.podspec
 ├── LICENSE
 ├── README.md
 └── Makefile
@@ -268,7 +268,7 @@ Re-run `make project` after Podfile or `project.yml` changes. Re-run `make gener
 
 ## CocoaPods
 
-`FsPlayer.podspec` defines the pod: name, version `0.1.0`, iOS 16.2, Swift 5.10, Apple frameworks, git source, Binary vs Debug, and third-party dependencies.
+`FSPlayer.podspec` defines the pod: name, version `0.1.0`, iOS 16.2, Swift 5.10, Apple frameworks, git source, Binary vs Debug, and third-party dependencies.
 
 ```ruby
 spec.dependency 'Kingfisher', '>= 8.0', '< 8.5'
