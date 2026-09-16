@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="640" viewBox="0 0 920 640" role="img" aria-labelledby="title desc">
+  <title id="title">FSPlayer architecture</title>
+  <desc id="desc">Layered diagram: consuming app, PlayerView, Player session, queue Now Playing and DeviceMedia, PlayerEngine, AVFoundationPlayerEngine, and platform adapters.</desc>
+  <rect width="920" height="640" fill="#f6f7f9"/>
+  <text x="460" y="36" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#1f2328">FSPlayer kernel</text>
+  <text x="460" y="56" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" fill="#57606a">App uses Player + PlayerView. AVPlayer stays inside the engine.</text>
+
+  <!-- App -->
+  <rect x="60" y="78" width="800" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="460" y="110" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328">Consuming app / FSPlayerExample (dumb host)</text>
+
+  <line x1="460" y1="130" x2="460" y2="154" stroke="#8c959f" stroke-width="1.5"/>
+
+  <!-- UI -->
+  <rect x="60" y="154" width="800" height="70" rx="8" fill="#ddf4ff" stroke="#54aeff"/>
+  <text x="460" y="182" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0969da">SwiftUI chrome</text>
+  <text x="460" y="204" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" fill="#1f2328">PlayerView · PlayerControlsView · PlaybackQueueView · PosterImageView · BufferingIndicatorView</text>
+
+  <line x1="460" y1="224" x2="460" y2="248" stroke="#8c959f" stroke-width="1.5"/>
+
+  <!-- Player -->
+  <rect x="60" y="248" width="800" height="70" rx="8" fill="#ddf4ff" stroke="#54aeff"/>
+  <text x="460" y="276" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0969da">Session</text>
+  <text x="460" y="298" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" fill="#1f2328">Player (ObservableObject) · attachVideo(to:) · load / play / seek / queue</text>
+
+  <line x1="220" y1="318" x2="220" y2="348" stroke="#8c959f" stroke-width="1.5"/>
+  <line x1="460" y1="318" x2="460" y2="348" stroke="#8c959f" stroke-width="1.5"/>
+  <line x1="700" y1="318" x2="700" y2="348" stroke="#8c959f" stroke-width="1.5"/>
+
+  <!-- Siblings -->
+  <rect x="60" y="348" width="240" height="72" rx="8" fill="#fff8c5" stroke="#d4a72c"/>
+  <text x="180" y="378" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#9a6700">Queue</text>
+  <text x="180" y="400" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328">PlaybackQueue</text>
+
+  <rect x="340" y="348" width="240" height="72" rx="8" fill="#fff8c5" stroke="#d4a72c"/>
+  <text x="460" y="378" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#9a6700">Now Playing</text>
+  <text x="460" y="400" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328">NowPlayingSession</text>
+
+  <rect x="620" y="348" width="240" height="72" rx="8" fill="#fff8c5" stroke="#d4a72c"/>
+  <text x="740" y="378" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#9a6700">Device media</text>
+  <text x="740" y="400" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328">DeviceMediaLibrary ’ PlayerItem</text>
+
+  <line x1="460" y1="420" x2="460" y2="444" stroke="#8c959f" stroke-width="1.5"/>
+
+  <!-- Engine -->
+  <rect x="60" y="444" width="800" height="70" rx="8" fill="#dafbe1" stroke="#4ac26b"/>
+  <text x="460" y="472" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1a7f37">Engine (internal)</text>
+  <text x="460" y="494" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="13" fill="#1f2328">PlayerEngine protocol · AVFoundationPlayerEngine · FakePlayerEngine (tests)</text>
+
+  <line x1="460" y1="514" x2="460" y2="538" stroke="#8c959f" stroke-width="1.5"/>
+
+  <!-- Platform -->
+  <rect x="60" y="538" width="152" height="72" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="136" y="568" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328">AVPlayer</text>
+  <text x="136" y="588" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="11" fill="#57606a">AVPlayerLayer</text>
+
+  <rect x="224" y="538" width="152" height="72" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="300" y="568" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328">Photos</text>
+  <text x="300" y="588" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="11" fill="#57606a">videos</text>
+
+  <rect x="388" y="538" width="152" height="72" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="464" y="568" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328">MediaPlayer</text>
+  <text x="464" y="588" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="11" fill="#57606a">songs + lock screen</text>
+
+  <rect x="552" y="538" width="152" height="72" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="628" y="568" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328">Kingfisher</text>
+  <text x="628" y="588" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="11" fill="#57606a">poster (source)</text>
+
+  <rect x="716" y="538" width="144" height="72" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="788" y="568" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328">Lottie</text>
+  <text x="788" y="588" text-anchor="middle" font-family="ui-sans-serif, Helvetica, Arial, sans-serif" font-size="11" fill="#57606a">buffering (binary)</text>
+</svg>

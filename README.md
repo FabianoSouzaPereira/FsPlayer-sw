@@ -106,15 +106,38 @@ The example app stays a dumb host. Do not add those product features to `FSPlaye
 
 ## Architecture
 
-`Player` is the public session (`ObservableObject`). Apps hold that type and pass it to `PlayerView`. Playback talks to an internal `PlayerEngine`; the default implementation is `AVFoundationPlayerEngine`. `AVPlayer` stays inside that engine. The SwiftUI layer binds video with `attachVideo(to:)`, not by reading the player object.
+FSPlayer is a **playback kernel**. The public types an app holds are `Player` (session) and `PlayerView` (SwiftUI chrome). Everything that talks to Apple’s `AVPlayer` lives behind an internal `PlayerEngine`. Features that feed or wrap the session sit **next to** `Player` under `Sources/FSPlayer`, not inside the class: queue, Now Playing, device media.
 
-Mute, volume, and the audio session go through the engine protocol. Tests inject `FakePlayerEngine` (`@testable`) so load / play / pause / seek / mute do not need a real `AVPlayer`.
+```text
+Consuming app / FSPlayerExample
+        │
+        ▼
+   PlayerView  ── poster (Kingfisher), buffering (Lottie), queue panel
+        │  observes
+        ▼
+     Player  ── PlaybackQueue, NowPlayingSession
+        │
+        ▼
+  PlayerEngine  (protocol; FakePlayerEngine in tests)
+        │
+        ▼
+  AVFoundationPlayerEngine  ── attachVideo(to: AVPlayerLayer)
+        │
+        ▼
+     AVPlayer
+```
 
-`DeviceMediaLibrary` sits next to `Player` under `Sources/FSPlayer/DeviceMedia`. It lists device videos (Photos) and songs (MediaPlayer) and turns a `DeviceMediaItem` into a `PlayerItem`. It does not play, navigate, or own UI.
+![FSPlayer architecture](docs/architecture.svg)
 
-`PlaybackQueue` (`Sources/FSPlayer/Queue`) is the play-next / play-previous list the `Player` owns. `NowPlayingSession` (`Sources/FSPlayer/NowPlaying`) mirrors the session to `MPNowPlayingInfoCenter` and `MPRemoteCommandCenter`. The example stays a dumb host; product chrome around the queue belongs in the consuming app.
+**Chrome.** `PlayerView` owns the video layer, controls, poster, buffering spinner, and the in-player queue list. It never reads `AVPlayer`. Video is bound with `player.attachVideo(to:)`.
 
-Login, session, other services, and VIPER modules belong in the **consuming app**, not here.
+**Session.** `Player` is an `ObservableObject`: load, play, pause, seek, stop, mute, volume, `loadQueue` / `playNext` / `playPrevious`. Mute, volume, and the audio session go through `PlayerEngine`. Tests inject `FakePlayerEngine` (`@testable`) so they do not need a real `AVPlayer`.
+
+**Siblings, not VIPER.** `PlaybackQueue` is the play-next list the session owns. `NowPlayingSession` mirrors state to `MPNowPlayingInfoCenter` and `MPRemoteCommandCenter`. `DeviceMediaLibrary` lists Photos videos and Music songs and returns a `PlayerItem`; it does not play or own UI.
+
+**Engine.** `AVFoundationPlayerEngine` is the only type that holds `AVPlayer`. A second backend (for example a test fake) only has to implement `PlayerEngine`.
+
+Login, catalog screens, and VIPER modules belong in the **consuming app**, not in this repository. The example stays a dumb host.
 
 ---
 
